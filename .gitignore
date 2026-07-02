@@ -1,0 +1,15 @@
+~$*
+*.tmp
+*.bak
+*.original
+*.dwl2
+*.ics
+*.pkpass
+*.obj
+*.stl
+*.FCStd
+__pycache__/
+node_modules/
+# Archivos >100 MB (exceden límite de GitHub)
+Postedor con muchas cosas.dxf
+027 Redes externas Parcelacion Aires del Rio.dxf

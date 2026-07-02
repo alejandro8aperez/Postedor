@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297" version="1.1">
+  <style>
+    .text { font-family: Arial, Helvetica, sans-serif; fill: #000; }
+    .title { font-size: 7.5px; font-weight: bold; }
+    .label { font-size: 6px; }
+    .box { fill: none; stroke: #0b5394; stroke-width: 0.6; }
+    .elec { stroke: #b30000; stroke-width: 1.2; fill: none; }
+    .pv { stroke: #38761d; stroke-width: 0.9; fill: none; }
+    .iot { stroke: #7030a0; stroke-width: 0.9; fill: none; }
+    .dim { stroke: #3c78d8; stroke-width: 0.5; stroke-dasharray: 2 1; fill:none; }
+  </style>
+
+  <!-- Título -->
+  <text x="10" y="12" class="text title">DIAGRAMA UNIFILAR Y LAYOUT - POSTEDOR (15 kVA)</text>
+
+  <!-- DIAGRAMA UNIFILAR (izquierda) -->
+  <g transform="translate(10,25)" id="unifilar">
+    <!-- Red MT -->
+    <line x1="0" y1="0" x2="60" y2="0" class="elec" />
+    <text x="0" y="-3" class="text label">Red MT 13.2 kV</text>
+    <!-- elbow / buje -->
+    <circle cx="66" cy="0" r="3" stroke="#000" stroke-width="0.8" fill="#fff"/>
+    <text x="71" y="2.5" class="text label">Elbow (buje)</text>
+
+    <!-- Transformador -->
+    <rect x="80" y="-18" width="70" height="36" class="box"/>
+    <text x="115" y="-3" class="text label" text-anchor="middle">Transformador 15 kVA</text>
+    <text x="115" y="6" class="text label" text-anchor="middle">13.2 kV → 240/120 V (en aceite)</text>
+
+    <!-- Salida BT -->
+    <line x1="150" y1="0" x2="220" y2="0" class="elec" />
+    <text x="185" y="-3" class="text label">Salida BT 240/120 V</text>
+
+    <!-- SPD AC -->
+    <rect x="225" y="-8" width="28" height="16" class="box"/>
+    <text x="239" y="6" class="text label" text-anchor="middle">SPD AC</text>
+
+    <!-- Bornera LV / MCB -->
+    <rect x="260" y="-12" width="42" height="24" class="box"/>
+    <text x="281" y="-1" class="text label" text-anchor="middle">Bornera LV</text>
+    <text x="281" y="6" class="text label" text-anchor="middle">MCB 63 A</text>
+
+    <!-- Línea hacia cargador EV -->
+    <line x1="281" y1="12" x2="281" y2="50" class="elec" />
+    <rect x="240" y="50" width="82" height="30" class="box" />
+    <text x="281" y="70" class="text label" text-anchor="middle">Cargador EV 7.4 kW (32 A)</text>
+
+    <!-- Línea hacia IoT/medición/inversor PV -->
+    <line x1="150" y1="0" x2="150" y2="90" class="elec" />
+    <rect x="120" y="90" width="60" height="28" class="box" />
+    <text x="150" y="108" class="text label" text-anchor="middle">CTs / Medidor</text>
+
+    <rect x="190" y="90" width="60" height="28" class="box" />
+    <text x="220" y="108" class="text label" text-anchor="middle">Comp. IoT</text>
+    <text x="220" y="116" class="text label" text-anchor="middle">Fuente 24V / UPS</text>
+
+    <!-- PV INVERTER -->
+    <rect x="60" y="120" width="80" height="28" class="box" />
+    <text x="100" y="138" class="text label" text-anchor="middle">Inversor PV 3 kW (único)</text>
+    <text x="100" y="146" class="text label" text-anchor="middle">Entrada PV 10 × 300 W</text>
+
+    <!-- Conexión PV al bus BT -->
+    <line x1="100" y1="120" x2="150" y2="120" class="pv" />
+    <line x1="150" y1="120" x2="150" y2="28" class="pv" />
+
+    <!-- Notas -->
+    <text x="0" y="180" class="text label">Notas: MCB principal 63 A. SPD AC en bornera. CTs para medida neta. IoT en compartimento 2.</text>
+  </g>
+
+  <!-- LAYOUT ELEVACIÓN (derecha) -->
+  <g transform="translate(230,25)" id="layout">
+    <text x="0" y="0" class="text label">ELEVACIÓN - POSTEDOR (12 m)</text>
+
+    <!-- Poste outline -->
+    <rect x="0" y="10" width="80" height="240" class="box" />
+
+    <!-- Divisiones tramos: 6m / 3m / 3m scaled to 240 height -->
+    <!-- escala: 240 units -> 12 m => 20 units/meter -->
+    <!-- tramo1 6m -> 120 units -->
+    <line x1="0" y1="130" x2="80" y2="130" class="dim" />
+    <text x="40" y="126" class="text label" text-anchor="middle">Fin Tramo 1 (6 m)</text>
+
+    <!-- tramo2 3m -> 60 units -->
+    <line x1="0" y1="70" x2="80" y2="70" class="dim" />
+    <text x="40" y="66" class="text label" text-anchor="middle">Fin Tramo 2 (3 m) - Transformador</text>
+
+    <!-- etiquetas de tramos -->
+    <text x="90" y="40" class="text label">Tramo 3: MT y paneles</text>
+    <text x="90" y="100" class="text label">Tramo 2: Transformador / Comp.2</text>
+    <text x="90" y="170" class="text label">Tramo 1: Base / Comp.1</text>
+
+    <!-- Planta del Comp.2 (detalle) -->
+    <g transform="translate(-10,270)">
+      <rect x="0" y="0" width="120" height="80" class="box" />
+      <text x="60" y="-4" class="text label" text-anchor="middle">PLANTA - Comp.2 (Transformador)</text>
+
+      <!-- Transformador en planta -->
+      <circle cx="35" cy="40" r="12" stroke="#0b5394" stroke-width="0.7" fill="none" />
+      <text x="35" y="56" class="text label" text-anchor="middle">TRANSF.</text>
+
+      <!-- Bornera / MCB -->
+      <rect x="60" y="20" width="24" height="18" class="box" />
+      <text x="72" y="40" class="text label" text-anchor="middle">BOR.</text>
+
+      <!-- IoT Compartment -->
+      <rect x="90" y="10" width="24" height="24" class="box" />
+      <text x="102" y="30" class="text label" text-anchor="middle">IoT</text>
+    </g>
+  </g>
+
+  <!-- Pie con referencia de archivo -->
+  <text x="10" y="289" class="text label">POSTEDOR - Documento gráfico generado automáticamente</text>
+</svg>
