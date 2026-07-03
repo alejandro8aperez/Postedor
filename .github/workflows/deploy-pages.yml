@@ -1,10 +1,8 @@
-name: Deploy POSTEDOR to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: ["main"]
-    paths:
-      - "website/**"
   workflow_dispatch:
 
 permissions:
