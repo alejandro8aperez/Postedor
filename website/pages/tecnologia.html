@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología | POSTEDOR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">P8</div>
+                <div class="logo-text">POSTE<span>DOR</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tecnologia.html" class="active">Tecnología</a></li>
+                <li><a href="parte-a.html">Parte A</a></li>
+                <li><a href="parte-b.html">Parte B</a></li>
+                <li><a href="parte-c.html">Parte C</a></li>
+                <li><a href="parte-d.html">Parte D</a></li>
+                <li><a href="especificaciones.html">Especificaciones</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
+            </ul>
+            <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header tecnologia">
+            <h1>Tecnología POSTEDOR</h1>
+            <p>Infraestructura energética inteligente que integra en un solo sistema modular la distribución eléctrica, carga de vehículos, IoT y energía solar.</p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header fade-in">
+                <span class="section-tag">Visión General</span>
+                <h2>El Sistema Completo</h2>
+            </div>
+
+            <div class="feature-row fade-in">
+                <div class="feature-content slide-in-left">
+                    <h3>📋 Descripción del Sistema</h3>
+                    <p>POSTEDOR es una solución integral de infraestructura energética inteligente que combina poste de distribución eléctrica, panel solar, transformador toroidal y estación de carga para vehículos eléctricos (VE) en un único sistema modular y estético. Diseñado para aplicaciones urbanas y rurales, promoviendo la transición hacia una red eléctrica más eficiente, distribuida y sostenible.</p>
+                    <p>El sistema integra un transformador toroidal monofásico (5, 10 o 15 kVA, aislamiento Clase B, núcleo de acero al silicio) montado dentro de un poste metálico galvanizado de 12 m con geometría hexagonal y estructura segmentada para facilitar transporte y mantenimiento.</p>
+                    <ul class="feature-list">
+                        <li>Integración estructural: poste, transformador y cargador en una sola unidad</li>
+                        <li>Sin aceite ni ventiladores — disipación térmica pasiva</li>
+                        <li>IoT + Blockchain para trazabilidad y comercialización de energía</li>
+                        <li>Diseño validado con simulaciones FEM (Elmer, SALOME)</li>
+                    </ul>
+                </div>
+                <div class="image-placeholder slide-in-right" style="background:none;border:none;padding:0;">
+                    <img src="../images/infraestructura.png" alt="POSTEDOR Infraestructura" style="width:100%;height:auto;border-radius:var(--radius);" onerror="this.parentElement.innerHTML='<div style=\"display:flex;align-items:center;justify-content:center;height:300px;background:var(--ps-light);border-radius:var(--radius);color:var(--ps-primary);font-size:1rem;\">POSTEDOR — Infraestructura Energética Urbana</div>'">
+                </div>
+            </div>
+
+            <div class="section-header fade-in" style="margin-top: 60px;">
+                <span class="section-tag">Arquitectura</span>
+                <h2>Estructura del Poste</h2>
+            </div>
+
+            <div class="feature-row reverse fade-in">
+                <div class="feature-content slide-in-right">
+                    <h3>Tramos del Poste</h3>
+                    <p>El poste metálico de 12 metros se divide en 3 tramos funcionales que albergan los diferentes componentes del sistema:</p>
+                    <ul class="feature-list">
+                        <li><strong>Tramo 3 (Superior):</strong> Media tensión (13.2 kV) y paneles solares</li>
+                        <li><strong>Tramo 2 (Medio):</strong> Transformador toroidal y módulo IoT</li>
+                        <li><strong>Tramo 1 (Base):</strong> Cargador de vehículos eléctricos y bornera LV</li>
+                    </ul>
+                    <p>El diseño segmentado facilita el transporte, la instalación y el mantenimiento, permitiendo el acceso independiente a cada componente sin desmontar todo el sistema.</p>
+                </div>
+                <div class="image-placeholder slide-in-left" style="background:none;border:none;padding:0;">
+                    <img src="../images/poste-paneles.svg" alt="Estructura del poste" style="width:100%;height:auto;border-radius:var(--radius);" onerror="this.parentElement.innerHTML='<div style=\"display:flex;align-items:center;justify-content:center;height:300px;background:var(--ps-light);border-radius:var(--radius);color:var(--ps-primary);font-size:1rem;\">Diagrama estructural del poste</div>'">
+                </div>
+            </div>
+
+            <div class="feature-row fade-in">
+                <div class="feature-content slide-in-left">
+                    <h3>Diagrama Unifilar</h3>
+                    <p>El sistema eléctrico de POSTEDOR conecta la red de media tensión (13.2 kV) con el transformador toroidal que reduce a 240/120 V, alimentando el cargador EV, el módulo IoT y el inversor solar.</p>
+                    <ul class="feature-list">
+                        <li>Red MT 13.2 kV → Elbow (buje) → Transformador 15 kVA</li>
+                        <li>Salida BT 240/120 V → SPD AC → Bornera LV / MCB 63 A</li>
+                        <li>Cargador EV 7.4 kW (32 A) en la base</li>
+                        <li>CTs / Medidor + Inversor PV 3 kW + Comp. IoT</li>
+                    </ul>
+                </div>
+                <div class="image-placeholder slide-in-right" style="background:none;border:none;padding:0;">
+                    <img src="../images/diagrama-unifilar.svg" alt="Diagrama Unifilar" style="width:100%;height:auto;border-radius:var(--radius);" onerror="this.parentElement.innerHTML='<div style=\"display:flex;align-items:center;justify-content:center;height:300px;background:var(--ps-light);border-radius:var(--radius);color:var(--ps-primary);font-size:1rem;\">Diagrama Unifilar POSTEDOR</div>'">
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div style="max-width: 700px; margin: 0 auto;">
+                <h2>Conoce cada parte del sistema</h2>
+                <p>Explora en detalle los 4 módulos que componen POSTEDOR.</p>
+                <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                    <a href="parte-a.html" class="btn btn-primary" style="background:white;color:#E65100;">Parte A — Cargador</a>
+                    <a href="parte-b.html" class="btn btn-primary" style="background:white;color:#7b1fa2;">Parte B — IoT</a>
+                    <a href="parte-c.html" class="btn btn-primary" style="background:white;color:#D32F2F;">Parte C — Transformador</a>
+                    <a href="parte-d.html" class="btn btn-primary" style="background:white;color:#2E7D32;">Parte D — MT+Solar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo-text" style="font-size: 24px;">POSTE<span style="color: #E65100;">DOR</span></div>
+                <p>Infraestructura energética inteligente para la movilidad del futuro. Medellín, Colombia.</p>
+            </div>
+            <div>
+                <h4>Plataforma</h4>
+                <ul class="footer-links">
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="especificaciones.html">Especificaciones</a></li>
+                    <li><a href="presupuesto.html">Presupuesto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Sistema</h4>
+                <ul class="footer-links">
+                    <li><a href="parte-a.html">Parte A — Cargador EV</a></li>
+                    <li><a href="parte-b.html">Parte B — Módulo IoT</a></li>
+                    <li><a href="parte-c.html">Parte C — Transformador</a></li>
+                    <li><a href="parte-d.html">Parte D — MT y Paneles</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/alejandro8aperez/Postedor" target="_blank">GitHub</a></li>
+                    <li><a href="#">Medellín, Colombia</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 POSTEDOR | Código: PST-2026 | EnergyTech</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
