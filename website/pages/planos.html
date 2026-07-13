@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos — Postedor | POSTEDOR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">P8</div>
+                <div class="logo-text">POSTE<span>DOR</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tecnologia.html">Tecnología</a></li>
+                <li><a href="parte-a.html">Parte A</a></li>
+                <li><a href="parte-b.html">Parte B</a></li>
+                <li><a href="parte-c.html">Parte C</a></li>
+                <li><a href="parte-d.html">Parte D</a></li>
+                <li><a href="planos.html" class="active">Planos</a></li>
+                <li><a href="especificaciones.html">Especificaciones</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
+            </ul>
+            <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header planos">
+            <h1>Planos de Ingeniería</h1>
+            <p>Simulación FEM térmica y planos del transformador toroidal 5kVA dentro del poste Postedor</p>
+        </section>
+
+        <section class="content-section">
+            <div class="feature-row fade-in">
+                <div class="feature-content slide-in-left">
+                    <h3>📐 Plano 1 — Vista en Planta</h3>
+                    <p>Sección horizontal del poste a la altura del transformador, mostrando la disposición del toroide, los brazos del spider de aluminio y las paredes del poste.</p>
+                    <ul class="feature-list">
+                        <li><strong>Poste:</strong> 350×350mm, pared 5mm acero galvanizado</li>
+                        <li><strong>Transformador:</strong> OD=300mm, ID=150mm, H=160mm</li>
+                        <li><strong>Spider:</strong> 4 brazos AL 6063-T5 conectando toroide → pared</li>
+                        <li><strong>Simetría:</strong> Modelo 1/4 con planos de simetría en X=0, Z=0</li>
+                    </ul>
+                    <a href="../planos/plano_01_planta.dxf" class="btn btn-primary" download>Descargar DXF (Planta)</a>
+                </div>
+                <div class="image-placeholder slide-in-right" style="background:none;border:none;padding:0;">
+                    <div style="display:flex;align-items:center;justify-content:center;height:350px;background:var(--ps-light);border-radius:var(--radius);color:var(--ps-primary);font-size:0.9rem;padding:20px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 350" style="width:100%;height:100%;max-width:330px;">
+                            <rect x="0.5" y="0.5" width="349" height="349" fill="#e8ecf1" stroke="#555" stroke-width="1"/>
+                            <rect x="5" y="5" width="340" height="340" fill="#d0d7de" stroke="#555" stroke-width="0.5"/>
+                            <line x1="175" y1="0" x2="175" y2="350" stroke="#c00" stroke-width="0.5" stroke-dasharray="5,3"/>
+                            <line x1="0" y1="175" x2="350" y2="175" stroke="#c00" stroke-width="0.5" stroke-dasharray="5,3"/>
+                            <circle cx="175" cy="175" r="150" fill="none" stroke="#78a" stroke-width="2"/>
+                            <circle cx="175" cy="175" r="75" fill="none" stroke="#78a" stroke-width="2" stroke-dasharray="4,2"/>
+                            <circle cx="175" cy="175" r="100" fill="none" stroke="#b82" stroke-width="1" stroke-dasharray="3,2"/>
+                            <circle cx="175" cy="175" r="125" fill="none" stroke="#b82" stroke-width="1" stroke-dasharray="3,2"/>
+                            <line x1="175" y1="150" x2="175" y2="200" stroke="#fa0" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="150" y1="175" x2="200" y2="175" stroke="#fa0" stroke-width="4"/>
+                            <line x1="175" y1="150" x2="200" y2="175" stroke="#fa0" stroke-width="4"/>
+                            <line x1="175" y1="200" x2="200" y2="175" stroke="#fa0" stroke-width="4"/>
+                            <line x1="175" y1="150" x2="150" y2="175" stroke="#fa0" stroke-width="4"/>
+                            <line x1="175" y1="200" x2="150" y2="175" stroke="#fa0" stroke-width="4"/>
+                            <line x1="175" y1="302" x2="175" y2="340" stroke="#070" stroke-width="4"/>
+                            <line x1="125" y1="340" x2="225" y2="340" stroke="#070" stroke-width="4"/>
+                            <line x1="125" y1="340" x2="125" y2="345" stroke="#070" stroke-width="1"/>
+                            <line x1="225" y1="340" x2="225" y2="345" stroke="#070" stroke-width="1"/>
+                            <text x="175" y="355" text-anchor="middle" font-size="7" fill="#070">350 mm</text>
+                            <line x1="345" y1="85" x2="345" y2="265" stroke="#070" stroke-width="4"/>
+                            <line x1="345" y1="85" x2="350" y2="85" stroke="#070" stroke-width="1"/>
+                            <line x1="345" y1="265" x2="350" y2="265" stroke="#070" stroke-width="1"/>
+                            <text x="357" y="180" font-size="6" fill="#070" transform="rotate(90,357,180)">5 mm</text>
+                            <text x="175" y="345" text-anchor="middle" font-size="5" fill="#070">OD 300 mm</text>
+                            <text x="175" y="18" text-anchor="middle" font-size="5" fill="#070">ID 150 mm</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-row reverse fade-in">
+                <div class="feature-content slide-in-right">
+                    <h3>📐 Plano 2 — Corte Vertical</h3>
+                    <p>Vista lateral del poste con 4 transformadores toroidales apilados de 5kVA cada uno, mostrando la conexión del spider a las paredes y el espacio entre módulos.</p>
+                    <ul class="feature-list">
+                        <li><strong>Configuración:</strong> 4×5kVA = 20kVA total</li>
+                        <li><strong>Altura ocupada:</strong> 860mm (márgenes 50mm + transformadores 160mm + gaps 40mm)</li>
+                        <li><strong>Spider:</strong> Brazos de aluminio en cada transformador a ambas paredes</li>
+                        <li><strong>Poste completo:</strong> 12m de altura — los 4 transformadores caben con margen</li>
+                    </ul>
+                    <a href="../planos/plano_02_lateral.dxf" class="btn btn-primary" download>Descargar DXF (Lateral)</a>
+                </div>
+                <div class="image-placeholder slide-in-left" style="background:none;border:none;padding:0;">
+                    <div style="display:flex;align-items:center;justify-content:center;height:350px;background:var(--ps-light);border-radius:var(--radius);color:var(--ps-primary);font-size:0.9rem;padding:10px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 350" style="width:auto;height:100%;max-height:330px;">
+                            <rect x="0" y="0" width="200" height="350" fill="#e8ecf1" rx="4"/>
+                            <rect x="5" y="10" width="10" height="330" fill="#888" rx="2"/>
+                            <rect x="185" y="10" width="10" height="330" fill="#888" rx="2"/>
+                            <line x1="15" y1="155" x2="185" y2="155" stroke="#fa0" stroke-width="3"/>
+                            <line x1="15" y1="215" x2="185" y2="215" stroke="#fa0" stroke-width="3"/>
+                            <line x1="15" y1="275" x2="185" y2="275" stroke="#fa0" stroke-width="3"/>
+                            <line x1="15" y1="335" x2="185" y2="335" stroke="#fa0" stroke-width="3"/>
+                            <rect x="20" y="50" width="160" height="30" fill="#abc" stroke="#678" stroke-width="1" rx="2"/>
+                            <rect x="20" y="100" width="160" height="30" fill="#abc" stroke="#678" stroke-width="1" rx="2"/>
+                            <rect x="20" y="150" width="160" height="30" fill="#abc" stroke="#678" stroke-width="1" rx="2"/>
+                            <rect x="20" y="200" width="160" height="30" fill="#abc" stroke="#678" stroke-width="1" rx="2"/>
+                            <line x1="100" y1="50" x2="100" y2="80" stroke="#446" stroke-width="4"/>
+                            <line x1="100" y1="100" x2="100" y2="130" stroke="#446" stroke-width="4"/>
+                            <line x1="100" y1="150" x2="100" y2="180" stroke="#446" stroke-width="4"/>
+                            <line x1="100" y1="200" x2="100" y2="230" stroke="#446" stroke-width="4"/>
+                            <text x="100" y="70" text-anchor="middle" font-size="8" fill="#334" font-weight="bold">5kVA</text>
+                            <text x="100" y="120" text-anchor="middle" font-size="8" fill="#334" font-weight="bold">5kVA</text>
+                            <text x="100" y="170" text-anchor="middle" font-size="8" fill="#334" font-weight="bold">5kVA</text>
+                            <text x="100" y="220" text-anchor="middle" font-size="8" fill="#334" font-weight="bold">5kVA</text>
+                            <text x="100" y="35" text-anchor="middle" font-size="5" fill="#070">MARGEN 50</text>
+                            <text x="100" y="95" text-anchor="middle" font-size="5" fill="#070">GAP 40</text>
+                            <text x="100" y="145" text-anchor="middle" font-size="5" fill="#070">GAP 40</text>
+                            <text x="100" y="195" text-anchor="middle" font-size="5" fill="#070">GAP 40</text>
+                            <text x="0" y="195" text-anchor="middle" font-size="5" fill="#070" transform="rotate(-90,-10,195)">860 mm</text>
+                            <text x="100" y="340" text-anchor="middle" font-size="5" fill="#070">MARGEN 50</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-row fade-in">
+                <div class="feature-content slide-in-left">
+                    <h3>🔧 Plano 3 — Detalle del Spider</h3>
+                    <p>Brazo de aluminio 6063-T5 que conecta térmica y mecánicamente el transformador a la pared del poste. Incluye abrazo al núcleo toroidal y fijación con tornillos M4.</p>
+                    <ul class="feature-list">
+                        <li><strong>Material:</strong> Aluminio 6063-T5 extruido (k=200 W/mK)</li>
+                        <li><strong>Sección:</strong> 20mm × 5mm</li>
+                        <li><strong>Longitud:</strong> 20mm (gap toroide → pared)</li>
+                        <li><strong>Fijación:</strong> Tornillos M4×12 a pared poste + abrazo mecánico</li>
+                    </ul>
+                    <a href="../planos/plano_03_spider.dxf" class="btn btn-primary" download>Descargar DXF (Spider)</a>
+                </div>
+                <div class="image-placeholder slide-in-right" style="background:none;border:none;padding:0;">
+                    <div style="display:flex;align-items:center;justify-content:center;height:300px;background:var(--ps-light);border-radius:var(--radius);color:var(--ps-primary);font-size:0.9rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="width:100%;height:100%;max-width:380px;">
+                            <rect x="0" y="0" width="400" height="200" fill="#e8ecf1" rx="4"/>
+                            <rect x="50" y="50" width="200" height="20" fill="#bbb" stroke="#777" stroke-width="1" rx="2"/>
+                            <circle cx="60" cy="60" r="3" fill="#555"/>
+                            <circle cx="60" cy="80" r="3" fill="#555"/>
+                            <line x1="60" y1="60" x2="40" y2="60" stroke="#555" stroke-width="1"/>
+                            <line x1="60" y1="80" x2="40" y2="80" stroke="#555" stroke-width="1"/>
+                            <circle cx="240" cy="60" r="3" fill="#555"/>
+                            <circle cx="240" cy="80" r="3" fill="#555"/>
+                            <rect x="250" y="40" width="15" height="40" fill="#888" stroke="#555" stroke-width="1" rx="1"/>
+                            <text x="50" y="40" font-size="5" fill="#070">20</text>
+                            <text x="258" y="30" font-size="5" fill="#070">5</text>
+                            <text x="150" y="30" text-anchor="middle" font-size="7" fill="#555">BRAZO SPIDER AL 6063-T5</text>
+                            <text x="50" y="100" font-size="5" fill="#555">Abrazo al toroide</text>
+                            <text x="255" y="100" font-size="5" fill="#555">Pared poste</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-row reverse fade-in">
+                <div class="feature-content slide-in-right">
+                    <h3>🌡️ Plano 4 — Mapa Térmico FEM</h3>
+                    <p>Resultados de la simulación por elementos finitos (Elmer) mostrando las isotermas y el flujo de calor desde el transformador hacia la pared del poste y el ambiente exterior.</p>
+                    <ul class="feature-list">
+                        <li><strong>Caso 4 (20kVA):</strong> 124°C máx en núcleo → 115°C pared → 30°C ambiente</li>
+                        <li><strong>Todas las configuraciones bajo límite Clase B (130°C)</strong></li>
+                        <li><strong>Spider:</strong> Reduce temperatura ~2°C (la resistencia dominante es convección externa)</li>
+                        <li><strong>Modelo:</strong> k_aire efectivo = 10 W/mK (efecto chimenea en poste 12m)</li>
+                    </ul>
+                    <a href="../planos/plano_04_termico.dxf" class="btn btn-primary" download>Descargar DXF (Térmico)</a>
+                </div>
+                <div class="image-placeholder slide-in-left" style="background:none;border:none;padding:0;">
+                    <div style="display:flex;align-items:center;justify-content:center;height:350px;background:var(--ps-light);border-radius:var(--radius);color:var(--ps-primary);font-size:0.9rem;padding:15px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 370" style="width:100%;height:100%;max-width:320px;">
+                            <rect x="0" y="0" width="350" height="370" fill="#e8ecf1" rx="4"/>
+                            <rect x="5" y="5" width="340" height="340" fill="#dde3ea" stroke="#555" stroke-width="0.5"/>
+                            <rect x="10" y="10" width="330" height="330" fill="#d0d7de" stroke="#555" stroke-width="0.3"/>
+                            <circle cx="175" cy="175" r="150" fill="none" stroke="#c60" stroke-width="1.5"/>
+                            <circle cx="175" cy="175" r="120" fill="none" stroke="#e80" stroke-width="1.5"/>
+                            <circle cx="175" cy="175" r="80" fill="none" stroke="#e40" stroke-width="1.5"/>
+                            <circle cx="175" cy="175" r="40" fill="none" stroke="#d00" stroke-width="2"/>
+                            <text x="175" y="178" text-anchor="middle" font-size="6" fill="#c00" font-weight="bold">124°C</text>
+                            <text x="200" y="125" font-size="5" fill="#e40">120°C</text>
+                            <text x="235" y="80" font-size="5" fill="#e80">118°C</text>
+                            <text x="20" y="178" font-size="5" fill="#e80">115°C</text>
+                            <text x="310" y="178" font-size="5" fill="#080">30°C</text>
+                            <line x1="175" y1="150" x2="10" y2="175" stroke="#c00" stroke-width="1.5" marker-end="url(#arrow)"/>
+                            <line x1="175" y1="200" x2="340" y2="175" stroke="#c00" stroke-width="1.5"/>
+                            <line x1="150" y1="175" x2="175" y2="10" stroke="#c00" stroke-width="1.5"/>
+                            <line x1="200" y1="175" x2="175" y2="340" stroke="#c00" stroke-width="1.5"/>
+                            <text x="175" y="360" text-anchor="middle" font-size="6" fill="#555">Flujo de calor: Transformador → Pared → Ambiente</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="specs-grid fade-in">
+                <div class="spec-card" style="border-left-color: #00897B;">
+                    <span class="spec-label">1. Planta</span>
+                    <span class="spec-value">Corte H</span>
+                    <span class="spec-unit">Poste + toroide + spider</span>
+                </div>
+                <div class="spec-card" style="border-left-color: #00897B;">
+                    <span class="spec-label">2. Lateral</span>
+                    <span class="spec-value">Corte V</span>
+                    <span class="spec-unit">4 transformadores apilados</span>
+                </div>
+                <div class="spec-card" style="border-left-color: #00897B;">
+                    <span class="spec-label">3. Spider</span>
+                    <span class="spec-value">Detalle</span>
+                    <span class="spec-unit">Brazo AL 6063-T5 20×5mm</span>
+                </div>
+                <div class="spec-card" style="border-left-color: #00897B;">
+                    <span class="spec-label">4. Térmico</span>
+                    <span class="spec-value">FEM</span>
+                    <span class="spec-unit">Isotermas 124→115→30°C</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div style="max-width: 700px; margin: 0 auto;">
+                <h2>Explora las especificaciones completas</h2>
+                <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                    <a href="especificaciones.html" class="btn btn-primary">Especificaciones Técnicas →</a>
+                    <a href="presupuesto.html" class="btn btn-outline">Ver Presupuesto</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo-text" style="font-size: 24px;">POSTE<span style="color: #E65100;">DOR</span></div>
+                <p>Infraestructura energética inteligente para la movilidad del futuro. Medellín, Colombia.</p>
+            </div>
+            <div>
+                <h4>Plataforma</h4>
+                <ul class="footer-links">
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="especificaciones.html">Especificaciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Sistema</h4>
+                <ul class="footer-links">
+                    <li><a href="parte-a.html">Parte A — Cargador EV</a></li>
+                    <li><a href="parte-b.html">Parte B — IoT</a></li>
+                    <li><a href="parte-c.html">Parte C — Transformador</a></li>
+                    <li><a href="parte-d.html">Parte D — MT y Paneles</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/alejandro8aperez/Postedor" target="_blank">GitHub</a></li>
+                    <li><a href="#">Medellín, Colombia</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 POSTEDOR | EnergyTech</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

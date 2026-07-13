@@ -1,0 +1,155 @@
+ELMER SOLVER (v 9.0) STARTED AT: 2026/07/12 19:01:40
+ParCommInit: Initialize #PEs: 1
+MAIN: 
+MAIN: =============================================================
+MAIN: ElmerSolver finite element software, Welcome!
+MAIN: This program is free software licensed under (L)GPL
+MAIN: Copyright 1st April 1995 - , CSC - IT Center for Science Ltd.
+MAIN: Webpage http://www.csc.fi/elmer, Email elmeradm@csc.fi
+MAIN: Version: 9.0 (Rev: Release, Compiled: 2025-08-09)
+MAIN:  Running one task without MPI parallelization.
+MAIN:  Running with just one thread per task.
+MAIN:  Lua interpreter linked in.
+MAIN: =============================================================
+MAIN: 
+MAIN: 
+MAIN: -------------------------------------
+MAIN: Reading Model: case.sif
+LoadInputFile: Scanning input file: case.sif
+LoadInputFile: Scanning only size info
+LoadInputFile: First time visiting
+LoadInputFile: Reading base load of sif file
+LoadInputFile: Loading input file: case.sif
+LoadInputFile: Reading base load of sif file
+CheckKeyword:  Unlisted keyword: [steady state] in section: [solver 1]
+LoadInputFile: Number of BCs: 3
+LoadInputFile: Number of Body Forces: 1
+LoadInputFile: Number of Initial Conditions: 0
+LoadInputFile: Number of Materials: 4
+LoadInputFile: Number of Equations: 1
+LoadInputFile: Number of Solvers: 1
+LoadInputFile: Number of Bodies: 4
+ListTagKeywords: Setting weight for keywords!
+ListTagKeywords: No parameters width suffix: normalize by area
+ListTagKeywords: Setting weight for keywords!
+ListTagKeywords: No parameters width suffix: normalize by volume
+ElmerAsciiMesh: Base mesh name: ./mesh
+MapCoordinates: Scaling coordinates: 1.000E+00 1.000E+00 1.000E+00
+LoadMesh: Elapsed REAL time:     0.0200 (s)
+MAIN: -------------------------------------
+OptimizeBandwidth: Initial bandwidth for heat equation: 92
+OptimizeBandwidth: Optimized bandwidth for heat equation: 218
+OptimizeBandwidth: Bandwidth optimization rejected, using original ordering.
+MAIN: Number of timesteps to be saved: 1
+MAIN: 
+MAIN: -------------------------------------
+MAIN:  Steady state iteration:            1
+MAIN: -------------------------------------
+MAIN: 
+HeatSolver: Solving the energy equation for temperature
+HeatSolve: 
+HeatSolve: 
+HeatSolve: -------------------------------------
+HeatSolve:  TEMPERATURE ITERATION           1
+HeatSolve: -------------------------------------
+HeatSolve: 
+HeatSolve: Starting Assembly...
+HeatSolve: Assembly:
+HeatSolve: Assembly done
+       1 0.1780E+01
+       2 0.3813E+01
+       3 0.1384E+02
+       4 0.7436E+01
+       5 0.8102E+01
+       6 0.8687E+01
+       7 0.8096E+01
+       8 0.6952E+01
+       9 0.3607E+01
+      10 0.2763E+01
+      11 0.2401E+01
+      12 0.1595E+01
+      13 0.1135E+01
+      14 0.5473E+00
+      15 0.2894E+00
+      16 0.1871E+00
+      17 0.1642E+00
+      18 0.1822E+00
+      19 0.1808E+00
+      20 0.1970E+00
+      21 0.1083E+00
+      22 0.9043E-01
+      23 0.4929E-01
+      24 0.3500E-01
+      25 0.3229E-01
+      26 0.2541E-01
+      27 0.1701E-01
+      28 0.1320E-01
+      29 0.1153E-01
+      30 0.9843E-02
+      31 0.1017E-01
+      32 0.1296E-01
+      33 0.1768E-01
+      34 0.1569E-01
+      35 0.1254E-01
+      36 0.9210E-02
+      37 0.5335E-02
+      38 0.4399E-02
+      39 0.2866E-02
+      40 0.1804E-02
+      41 0.1477E-02
+      42 0.1342E-02
+      43 0.1395E-02
+      44 0.9158E-03
+      45 0.4925E-03
+      46 0.2523E-03
+      47 0.2158E-03
+      48 0.1289E-03
+      49 0.1088E-03
+      50 0.7324E-04
+      51 0.4413E-04
+      52 0.2290E-04
+      53 0.1661E-04
+      54 0.1254E-04
+      55 0.8092E-05
+      56 0.5764E-05
+      57 0.3405E-05
+      58 0.2187E-05
+      59 0.1356E-05
+      60 0.9535E-06
+      61 0.6468E-06
+      62 0.4496E-06
+      63 0.2472E-06
+      64 0.1610E-06
+      65 0.8911E-07
+      66 0.5180E-07
+      67 0.3285E-07
+      68 0.1982E-07
+      69 0.7707E-08
+      69 0.7707E-08
+ComputeChange: NS (ITER=1) (NRM,RELC): (  119.94967      2.0000000     ) :: heat equation
+HeatSolve: iter:    1 Assembly: (s)    0.06    0.06
+HeatSolve: iter:    1 Solve:    (s)    0.02    0.02
+HeatSolve:  Result Norm   :    119.94967295534579
+HeatSolve:  Relative Change :    2.0000000000000000
+HeatSolve: 
+HeatSolve: 
+HeatSolve: -------------------------------------
+HeatSolve:  TEMPERATURE ITERATION           2
+HeatSolve: -------------------------------------
+HeatSolve: 
+HeatSolve: Starting Assembly...
+HeatSolve: Assembly:
+HeatSolve: Assembly done
+       1 0.4559E-08
+       1 0.4559E-08
+ComputeChange: NS (ITER=2) (NRM,RELC): (  119.94967     0.16752150E-12 ) :: heat equation
+HeatSolve: iter:    2 Assembly: (s)    0.05    0.11
+HeatSolve: iter:    2 Solve:    (s)    0.00    0.02
+HeatSolve:  Result Norm   :    119.94967295532570
+HeatSolve:  Relative Change :    1.6752149524224095E-013
+ComputeChange: SS (ITER=1) (NRM,RELC): (  119.94967      2.0000000     ) :: heat equation
+WritePostFile: Saving results in ElmerPost format to file postedor.ep
+MAIN: *** Elmer Solver: ALL DONE ***
+MAIN: The end
+SOLVER TOTAL TIME(CPU,REAL):         0.47        0.47
+ELMER SOLVER FINISHED AT: 2026/07/12 19:01:41
