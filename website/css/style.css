@@ -427,6 +427,7 @@ body {
 .page-header.especificaciones { background: linear-gradient(135deg, #0d47a1, #1565c0, #1e88e5); }
 .page-header.presupuesto { background: linear-gradient(135deg, #072A4A, #0b5394, #1A73E8); }
 .page-header.planos { background: linear-gradient(135deg, #00695C, #00897B, #26A69A); }
+.page-header.simulaciones { background: linear-gradient(135deg, #E65100, #FF6F00, #FFA000); }
 
 .image-placeholder {
     width: 100%;

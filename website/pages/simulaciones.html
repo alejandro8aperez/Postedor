@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulaciones — Postedor | POSTEDOR</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">P8</div>
+                <div class="logo-text">POSTE<span>DOR</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tecnologia.html">Tecnología</a></li>
+                <li><a href="parte-a.html">Parte A</a></li>
+                <li><a href="parte-b.html">Parte B</a></li>
+                <li><a href="parte-c.html">Parte C</a></li>
+                <li><a href="parte-d.html">Parte D</a></li>
+                <li><a href="planos.html">Planos</a></li>
+                <li><a href="simulaciones.html" class="active">Simulaciones</a></li>
+                <li><a href="especificaciones.html">Especificaciones</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
+            </ul>
+            <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header simulaciones">
+            <h1>Simulaciones Térmicas FEM</h1>
+            <p>Análisis por elementos finitos del transformador toroidal 5kVA dentro del poste Postedor</p>
+        </section>
+
+        <section class="content-section">
+            <div class="feature-row fade-in">
+                <div class="feature-content">
+                    <h3>Modelo de Simulación</h3>
+                    <p>Simulación termo-eléctrica en estado estacionario usando <strong>Elmer FEM</strong> con geometría 1/4 de simetría. Se evaluaron 4 configuraciones de carga (5/10/15/20 kVA), cada una con y sin spider térmico de aluminio.</p>
+                    <ul class="feature-list">
+                        <li><strong>Software:</strong> Elmer FEM — Solver Heat Equation</li>
+                        <li><strong>Geometría:</strong> 1/4 simetría, poste 350×350mm, pared 5mm acero</li>
+                        <li><strong>Transformador:</strong> OD=300mm, ID=150mm, H=160mm (volumen anular toroidal)</li>
+                        <li><strong>Pérdidas base (5kVA):</strong> Cu=149W + Fe=58.4W = <strong>207.4W</strong></li>
+                        <li><strong>Conductividad aire efectiva:</strong> 10 W/mK (~400× molecular) para modelar efecto chimenea en poste de 12m</li>
+                        <li><strong>Convección exterior:</strong> h=7.5 W/m²K, T∞=30°C</li>
+                        <li><strong>Spider aluminio 6063-T5:</strong> 4 brazos por transformador, sección 20×5mm, k=200 W/mK</li>
+                        <li><strong>Límite Clase B:</strong> 130°C (aislamiento devanados)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h3 style="text-align:center;margin-bottom:2rem;">Resultados de Temperatura</h3>
+            <div style="overflow-x:auto;">
+                <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+                    <thead>
+                        <tr style="background:var(--ps-primary);color:white;">
+                            <th style="padding:12px 16px;text-align:left;">Caso</th>
+                            <th style="padding:12px 16px;text-align:center;">Carga</th>
+                            <th style="padding:12px 16px;text-align:center;">Pérdidas</th>
+                            <th style="padding:12px 16px;text-align:center;">Spider</th>
+                            <th style="padding:12px 16px;text-align:center;">Tmax</th>
+                            <th style="padding:12px 16px;text-align:center;">Tmin</th>
+                            <th style="padding:12px 16px;text-align:center;">Tavg</th>
+                            <th style="padding:12px 16px;text-align:center;">Límite B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom:1px solid var(--border);">
+                            <td style="padding:10px 16px;font-weight:600;">1</td>
+                            <td style="padding:10px 16px;text-align:center;">5 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">207 W</td>
+                            <td style="padding:10px 16px;text-align:center;">No</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">107.7°C</td>
+                            <td style="padding:10px 16px;text-align:center;">101.3°C</td>
+                            <td style="padding:10px 16px;text-align:center;">105.0°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--border);background:var(--ps-light);">
+                            <td style="padding:10px 16px;font-weight:600;">1</td>
+                            <td style="padding:10px 16px;text-align:center;">5 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">207 W</td>
+                            <td style="padding:10px 16px;text-align:center;">Sí</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">106.2°C</td>
+                            <td style="padding:10px 16px;text-align:center;">101.1°C</td>
+                            <td style="padding:10px 16px;text-align:center;">104.4°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--border);">
+                            <td style="padding:10px 16px;font-weight:600;">2</td>
+                            <td style="padding:10px 16px;text-align:center;">10 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">415 W</td>
+                            <td style="padding:10px 16px;text-align:center;">No</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">117.7°C</td>
+                            <td style="padding:10px 16px;text-align:center;">110.3°C</td>
+                            <td style="padding:10px 16px;text-align:center;">114.7°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--border);background:var(--ps-light);">
+                            <td style="padding:10px 16px;font-weight:600;">2</td>
+                            <td style="padding:10px 16px;text-align:center;">10 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">415 W</td>
+                            <td style="padding:10px 16px;text-align:center;">Sí</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">115.9°C</td>
+                            <td style="padding:10px 16px;text-align:center;">110.1°C</td>
+                            <td style="padding:10px 16px;text-align:center;">114.1°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--border);">
+                            <td style="padding:10px 16px;font-weight:600;">3</td>
+                            <td style="padding:10px 16px;text-align:center;">15 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">622 W</td>
+                            <td style="padding:10px 16px;text-align:center;">No</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">121.9°C</td>
+                            <td style="padding:10px 16px;text-align:center;">113.7°C</td>
+                            <td style="padding:10px 16px;text-align:center;">118.6°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--border);background:var(--ps-light);">
+                            <td style="padding:10px 16px;font-weight:600;">3</td>
+                            <td style="padding:10px 16px;text-align:center;">15 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">622 W</td>
+                            <td style="padding:10px 16px;text-align:center;">Sí</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">120.0°C</td>
+                            <td style="padding:10px 16px;text-align:center;">113.6°C</td>
+                            <td style="padding:10px 16px;text-align:center;">117.9°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--border);">
+                            <td style="padding:10px 16px;font-weight:600;">4</td>
+                            <td style="padding:10px 16px;text-align:center;">20 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">830 W</td>
+                            <td style="padding:10px 16px;text-align:center;">No</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">124.0°C</td>
+                            <td style="padding:10px 16px;text-align:center;">115.4°C</td>
+                            <td style="padding:10px 16px;text-align:center;">120.6°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
+                        </tr>
+                        <tr style="border-bottom:2px solid var(--ps-primary);background:var(--ps-light);">
+                            <td style="padding:10px 16px;font-weight:600;">4</td>
+                            <td style="padding:10px 16px;text-align:center;">20 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">830 W</td>
+                            <td style="padding:10px 16px;text-align:center;">Sí</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">122.1°C</td>
+                            <td style="padding:10px 16px;text-align:center;">115.3°C</td>
+                            <td style="padding:10px 16px;text-align:center;">119.9°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="text-align:center;margin-top:12px;color:var(--text-light);font-size:0.85rem;">Los 8 casos cumplen con el límite Clase B (130°C). Diferencia spider vs sin-spider: ~2°C (la resistencia dominante es la convección externa).</p>
+        </section>
+
+        <section class="content-section">
+            <div class="feature-row fade-in">
+                <div class="feature-content slide-in-left">
+                    <h3>Configuración 1/4 de Simetría</h3>
+                    <p>El modelo utiliza simetría para reducir el costo computacional. La malla de elementos finitos se genera con ElmerGrid a partir de un archivo GDF.</p>
+                    <ul class="feature-list">
+                        <li><strong>Malla:</strong> ~1200 nodos por caso, elementos hexaédricos</li>
+                        <li><strong>Fronteras:</strong> Convección exterior, adiabático top/bottom, simetría X=0, Z=0</li>
+                        <li><strong>Heat Source:</strong> Definido por masa (W/kg) — corregido tras detectar factor 5000× por densidad 5000 kg/m³</li>
+                        <li><strong>Body assignment:</strong> Volumen anular toroidal real (no columna rectangular)</li>
+                    </ul>
+                </div>
+                <div class="image-placeholder slide-in-right" style="background:none;border:none;padding:0;">
+                    <div style="display:flex;align-items:center;justify-content:center;height:320px;background:var(--ps-light);border-radius:var(--radius);flex-direction:column;padding:20px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" style="width:100%;height:100%;max-width:280px;">
+                            <rect x="0.5" y="0.5" width="299" height="299" fill="#e8ecf1" stroke="#555" stroke-width="1"/>
+                            <rect x="20" y="20" width="260" height="260" fill="#d0d7de" stroke="#777" stroke-width="0.5"/>
+                            <rect x="80" y="80" width="140" height="140" rx="8" fill="#f5c542" stroke="#c7922e" stroke-width="1.5" opacity="0.85"/>
+                            <circle cx="150" cy="150" r="55" fill="#f5c542" stroke="#c7922e" stroke-width="1.5" opacity="0.6"/>
+                            <circle cx="150" cy="150" r="25" fill="#e8ecf1" stroke="#c7922e" stroke-width="1" opacity="0.7"/>
+                            <line x1="150" y1="20" x2="150" y2="280" stroke="#1a73e8" stroke-width="1.5" stroke-dasharray="6,4"/>
+                            <line x1="20" y1="150" x2="280" y2="150" stroke="#1a73e8" stroke-width="1.5" stroke-dasharray="6,4"/>
+                            <rect x="80" y="235" width="140" height="18" rx="3" fill="#b0bec5" stroke="#78909c" stroke-width="0.8"/>
+                            <rect x="80" y="47" width="140" height="18" rx="3" fill="#b0bec5" stroke="#78909c" stroke-width="0.8"/>
+                            <rect x="235" y="80" width="18" height="140" rx="3" fill="#b0bec5" stroke="#78909c" stroke-width="0.8"/>
+                            <rect x="47" y="80" width="18" height="140" rx="3" fill="#b0bec5" stroke="#78909c" stroke-width="0.8"/>
+                            <text x="150" y="18" text-anchor="middle" font-size="12" fill="#1a73e8">X=0</text>
+                            <text x="8" y="153" text-anchor="start" font-size="12" fill="#1a73e8" transform="rotate(-90,14,153)">Z=0</text>
+                            <text x="150" y="295" text-anchor="middle" font-size="9" fill="#555">Modelo 1/4 simetría — Elmer FEM</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="background:var(--ps-light);border-radius:var(--radius);margin:2rem auto;max-width:900px;padding:2rem;">
+            <h3 style="text-align:center;">Análisis de Resultados</h3>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:1.5rem;">
+                <div style="background:white;padding:1.5rem;border-radius:var(--radius);text-align:center;">
+                    <div style="font-size:2.5rem;font-weight:800;color:#e53935;">124.0°C</div>
+                    <div style="font-size:0.9rem;color:var(--text-light);">Tmax peor caso (20 kVA, sin spider)</div>
+                </div>
+                <div style="background:white;padding:1.5rem;border-radius:var(--radius);text-align:center;">
+                    <div style="font-size:2.5rem;font-weight:800;color:#43a047;">~2°C</div>
+                    <div style="font-size:0.9rem;color:var(--text-light);">Diferencia spider vs sin spider</div>
+                </div>
+                <div style="background:white;padding:1.5rem;border-radius:var(--radius);text-align:center;">
+                    <div style="font-size:2.5rem;font-weight:800;color:#1b5e20;">100%</div>
+                    <div style="font-size:0.9rem;color:var(--text-light);">Casos bajo límite Clase B (130°C)</div>
+                </div>
+            </div>
+            <p style="margin-top:1.5rem;color:var(--text-light);font-size:0.9rem;text-align:center;">El spider térmico de aluminio reduce la temperatura unos 2°C en todos los casos, pero la resistencia térmica dominante es la convección natural en la pared exterior del poste. Para cargas >20 kVA se recomienda aislamiento Clase H (180°C) o refrigeración forzada.</p>
+        </section>
+
+        <section class="content-section">
+            <h3 style="text-align:center;margin-bottom:1.5rem;">Estructura de Archivos</h3>
+            <div style="max-width:700px;margin:0 auto;background:var(--ps-light);border-radius:var(--radius);padding:1.5rem 2rem;font-family:monospace;font-size:0.85rem;line-height:1.8;overflow-x:auto;">
+                simulacion_fem/elmer/<br>
+                ├── run_simulation.py          &lt;-- Script principal<br>
+                ├── _parse_ep.py               &lt;-- Extrae temperaturas de resultados<br>
+                ├── _report.py                 &lt;-- Genera reportes<br>
+                ├── caso_1_solo_con_spider/    &lt;-- 5 kVA con spider<br>
+                ├── caso_1_solo_sin_spider/    &lt;-- 5 kVA sin spider<br>
+                ├── caso_2_paralelo2_con_spider/<br>
+                ├── caso_2_paralelo2_sin_spider/<br>
+                ├── caso_3_paralelo3_con_spider/<br>
+                ├── caso_3_paralelo3_sin_spider/<br>
+                ├── caso_4_paralelo4_con_spider/  &lt;-- 20 kVA con spider<br>
+                ├── caso_4_paralelo4_sin_spider/  &lt;-- 20 kVA sin spider<br>
+                └── template/                 &lt;-- Plantilla GDF para malla<br>
+                <br>
+                simulacion_fem/planos/<br>
+                └── generar_planos.py         &lt;-- Genera DXF desde geometría<br>
+                <br>
+                Cada caso contiene:<br>
+                &nbsp;&nbsp;case.sif              &lt;-- Configuración ElmerSolver<br>
+                &nbsp;&nbsp;mesh/                 &lt;-- Malla (boundary, elements, nodes)<br>
+                &nbsp;&nbsp;results/postedor.ep   &lt;-- Resultados temperatura nodal<br>
+                &nbsp;&nbsp;solver_output.txt     &lt;-- Log del solver<br>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div style="max-width: 700px; margin: 0 auto;">
+                <h2>Explora las especificaciones completas</h2>
+                <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                    <a href="especificaciones.html" class="btn btn-primary">Especificaciones Técnicas →</a>
+                    <a href="presupuesto.html" class="btn btn-outline">Ver Presupuesto</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo-text" style="font-size: 24px;">POSTE<span style="color: #E65100;">DOR</span></div>
+                <p>Infraestructura energética inteligente para la movilidad del futuro. Medellín, Colombia.</p>
+            </div>
+            <div>
+                <h4>Plataforma</h4>
+                <ul class="footer-links">
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="simulaciones.html">Simulaciones</a></li>
+                    <li><a href="especificaciones.html">Especificaciones</a></li>
+                    <li><a href="presupuesto.html">Presupuesto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Sistema</h4>
+                <ul class="footer-links">
+                    <li><a href="parte-a.html">Parte A — Cargador EV</a></li>
+                    <li><a href="parte-b.html">Parte B — IoT</a></li>
+                    <li><a href="parte-c.html">Parte C — Transformador</a></li>
+                    <li><a href="parte-d.html">Parte D — MT y Paneles</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <ul class="footer-links">
+                    <li><a href="https://github.com/alejandro8aperez/Postedor" target="_blank">GitHub</a></li>
+                    <li><a href="#">Medellín, Colombia</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 POSTEDOR | EnergyTech</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
