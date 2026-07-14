@@ -33,20 +33,23 @@
     <main>
         <section class="page-header parte-b">
             <h1>Parte B — Módulo IoT y Telemetría</h1>
-            <p>Monitoreo remoto, sensores inteligentes y gestión descentralizada de energía</p>
+            <p>Monitoreo remoto con SIM Claro → EPM, sensores inteligentes y gestión descentralizada de pagos con Blockchain</p>
         </section>
 
         <section class="content-section">
             <div class="feature-row fade-in">
                 <div class="feature-content slide-in-left">
                     <h3>📡 Conectividad Inteligente</h3>
-                    <p>El módulo IoT empotrado en POSTEDOR permite el monitoreo remoto de todas las variables eléctricas, temperatura, humedad y estado operativo del sistema. Equipado con sensores de última generación y comunicaciones seguras, este módulo convierte cada poste en un nodo inteligente de la red eléctrica urbana.</p>
+                    <p>El módulo IoT empotrado en POSTEDOR permite el monitoreo remoto de todas las variables del sistema. Se comunica vía <strong>SIM Claro 4G/5G</strong> directamente con los servidores de <strong>EPM</strong>, garantizando la integración con la infraestructura del operador de red colombiano.</p>
                     <ul class="feature-list">
-                        <li>Sensores de presión, conductividad, temperatura, humedad y flujo</li>
-                        <li>Comunicación mediante protocolos Modbus TCP/IP y MQTT</li>
-                        <li>Cifrado de datos con TLS 1.3 para seguridad de la información</li>
-                        <li>Compatibilidad con plataformas abiertas de gestión energética y smart grids</li>
-                        <li>Anonimización de datos cumpliendo Ley 1581 de 2012 (protección de datos)</li>
+                        <li><strong>SIM:</strong> Claro 4G/5G M2M — Comunicación directa con EPM para telemedición y telecontrol</li>
+                        <li><strong>Sensores de tensión:</strong> Medición de V primaria (13.2 kV) y V secundaria (240/120 V) con CTs de precisión</li>
+                        <li><strong>Sensores de corriente:</strong> CTs en cada fase para monitoreo de carga y balance</li>
+                        <li><strong>Temperatura:</strong> Sensor PT100 en el núcleo del transformador toroidal</li>
+                        <li><strong>Humedad y presión:</strong> Sensor ambiental interno para detección de condensación</li>
+                        <li><strong>Energía:</strong> Medidor bidireccional para registrar consumo e inyección a red</li>
+                        <li><strong>Comunicación:</strong> Protocolos Modbus TCP/IP y MQTT con cifrado TLS 1.3</li>
+                        <li><strong>Protección de datos:</strong> Anonimización cumpliendo Ley 1581 de 2012</li>
                     </ul>
                 </div>
                 <div class="image-placeholder slide-in-right" style="background:none;border:none;padding:0;">
@@ -56,47 +59,83 @@
 
             <div class="section-header fade-in" style="margin-top: 60px;">
                 <span class="section-tag">Blockchain</span>
-                <h2>Gestión Descentralizada de Energía</h2>
+                <h2>Gestión Descentralizada de Pagos y Energía</h2>
             </div>
 
-            <div class="feature-row reverse fade-in">
-                <div class="feature-content slide-in-right">
-                    <h3>⛓️ Contrato Inteligente</h3>
-                    <p>POSTEDOR incorpora un sistema blockchain que registra cada transacción de carga mediante un contrato inteligente diseñado para la comercialización descentralizada de energía, garantizando transparencia y micropagos seguros entre usuarios y operadores.</p>
+            <div class="feature-row fade-in">
+                <div class="feature-content slide-in-left">
+                    <h3>⛓️ Fundamentos Teóricos del Blockchain</h3>
+                    <p>Blockchain es una tecnología de registro distribuido (DLT) que permite almacenar transacciones de forma segura, inmutable y transparente sin necesidad de una autoridad central. Cada bloque contiene un conjunto de transacciones validadas por consenso de la red y está enlazado criptográficamente al bloque anterior, formando una cadena inquebrantable.</p>
                     <ul class="feature-list">
-                        <li>Registro inmutable de cada kWh cargado</li>
-                        <li>Micropagos seguros entre usuarios y operadores</li>
-                        <li>Trazabilidad completa de la energía distribuida</li>
-                        <li>Comercialización descentralizada sin intermediarios</li>
-                        <li>Integración con el sistema IoT para datos en tiempo real</li>
+                        <li><strong>Inmutabilidad:</strong> Una vez registrada una transacción de energía, no puede ser alterada ni eliminada</li>
+                        <li><strong>Transparencia:</strong> Todas las transacciones son visibles para los participantes autorizados</li>
+                        <li><strong>Descentralización:</strong> No existe un punto único de fallo — la red opera entre pares (P2P)</li>
+                        <li><strong>Consenso:</strong> Las transacciones se validan mediante algoritmos criptográficos sin intermediarios</li>
+                        <li><strong>Smart Contracts:</strong> Programas autoejecutables que automatizan pagos y liberación de energía</li>
+                    </ul>
+                    <p>POSTEDOR implementa un smart contract sobre la red de capa 2 de Ethereum (Polygon) para gestionar micropagos de energía en tiempo real, reduciendo costos de transacción a fracciones de centavo de dólar.</p>
+                </div>
+                <div class="image-placeholder slide-in-right">
+                    <span class="icon">⛓️</span>
+                    <span>Cadena de Bloques</span>
+                </div>
+            </div>
+
+            <div class="feature-row reverse fade-in" style="margin-top: 40px;">
+                <div class="feature-content slide-in-right">
+                    <h3>💳 Medios de Pago en POSTEDOR</h3>
+                    <p>POSTEDOR acepta <strong>4 medios de pago</strong> para la carga de vehículos eléctricos, garantizando accesibilidad universal:</p>
+                    <ul class="feature-list">
+                        <li><strong>Tarjeta EPM:</strong> Integración directa con la tarjeta inteligente de Empresas Públicas de Medellín — descuentos para suscriptores residenciales</li>
+                        <li><strong>Tarjeta Débito:</strong> Pago con tarjetas débito nacionales e internacionales (Redeban, CredibanCo)</li>
+                        <li><strong>Tarjeta Crédito:</strong> Pago con tarjetas crédito Visa, Mastercard y American Express</li>
+                        <li><strong>Blockchain (Cripto):</strong> Pago con USDC, USDT y POST token (token propio del ecosistema) mediante wallet Web3 (Metamask, Trust Wallet)</li>
                     </ul>
                 </div>
                 <div class="image-placeholder slide-in-left">
-                    <span class="icon">⛓️</span>
-                    <span>Blockchain Energético</span>
+                    <span class="icon">💳</span>
+                    <span>4 Medios de Pago</span>
+                </div>
+            </div>
+
+            <div class="feature-row fade-in" style="margin-top: 40px;">
+                <div class="feature-content slide-in-left">
+                    <h3>✅ Beneficios de Usar Blockchain en POSTEDOR</h3>
+                    <ul class="feature-list">
+                        <li><strong>Tarifas dinámicas:</strong> El smart contract ajusta el precio del kWh según demanda, hora del día y disponibilidad solar — sin intervención humana</li>
+                        <li><strong>Micropagos en tiempo real:</strong> Se cobra por segundo de carga en lugar de sesiones completas, permitiendo recargas de pocos minutos</li>
+                        <li><strong>Liquidación automática:</strong> Al finalizar la carga, el contrato libera los fondos al operador y emite un recibo inmutable en la blockchain</li>
+                        <li><strong>Comercialización P2P:</strong> Los usuarios con excedentes de energía solar pueden vender directamente a otros vehículos sin pasar por un comercializador</li>
+                        <li><strong>Trazabilidad regulatoria:</strong> EPM y la CREG pueden auditar todas las transacciones energéticas en tiempo real desde el explorador de bloques</li>
+                        <li><strong>Sin intermediarios financieros:</strong> Las comisiones bancarias se reducen de 3-5% a menos de 0.1% por transacción</li>
+                    </ul>
+                </div>
+                <div class="image-placeholder slide-in-right">
+                    <span class="icon">✅</span>
+                    <span>Beneficios Blockchain</span>
                 </div>
             </div>
 
             <div class="specs-grid fade-in">
                 <div class="spec-card" style="border-left-color: #7b1fa2;">
-                    <span class="spec-label">Protocolo IoT</span>
-                    <span class="spec-value">Modbus TCP/IP</span>
-                    <span class="spec-unit">+ MQTT</span>
+                    <span class="spec-label">Red Móvil</span>
+                    <span class="spec-value">Claro 4G/5G M2M</span>
+                    <span class="spec-unit">Comunicación con EPM</span>
                 </div>
                 <div class="spec-card" style="border-left-color: #7b1fa2;">
-                    <span class="spec-label">Seguridad</span>
-                    <span class="spec-value">TLS 1.3</span>
-                    <span class="spec-unit">Cifrado extremo a extremo</span>
+                    <span class="spec-label">Sensores</span>
+                    <span class="spec-value">Tensión / Corriente / T° / H</span>
+                    <span class="spec-unit">Monitoreo completo del sistema</span>
                 </div>
                 <div class="spec-card" style="border-left-color: #7b1fa2;">
                     <span class="spec-label">Blockchain</span>
-                    <span class="spec-value">Smart Contract</span>
-                    <span class="spec-unit">Comercialización P2P</span>
+                    <span class="spec-value">Polygon L2</span>
+                    <span class="spec-unit">Smart Contract + USDC/USDT/POST</span>
                 </div>
                 <div class="spec-card" style="border-left-color: #7b1fa2;">
-                    <span class="spec-label">Estándar</span>
-                    <span class="spec-value">OCPP 2.0.1</span>
-                    <span class="spec-unit">Interoperabilidad redes de carga</span>
+                    <span class="spec-label">Medios de Pago</span>
+                    <span class="spec-value">4 métodos</span>
+                    <span class="spec-unit">Tarjeta EPM / Débito / Crédito / Crypto</span>
                 </div>
             </div>
         </section>

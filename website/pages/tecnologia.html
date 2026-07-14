@@ -39,14 +39,13 @@
         <section class="content-section">
             <div class="section-header fade-in">
                 <span class="section-tag">Visión General</span>
-                <h2>El Sistema Completo</h2>
+                <h2>POSTEDOR — El Poste Dividido en 4 Partes</h2>
             </div>
 
             <div class="feature-row fade-in">
                 <div class="feature-content slide-in-left">
                     <h3>📋 Descripción del Sistema</h3>
-                    <p>POSTEDOR es una solución integral de infraestructura energética inteligente que combina poste de distribución eléctrica, panel solar, transformador toroidal y estación de carga para vehículos eléctricos (VE) en un único sistema modular y estético. Diseñado para aplicaciones urbanas y rurales, promoviendo la transición hacia una red eléctrica más eficiente, distribuida y sostenible.</p>
-                    <p>El sistema integra un transformador toroidal monofásico (5, 10 o 15 kVA, aislamiento Clase B, núcleo de acero al silicio) montado dentro de un poste metálico galvanizado de 12 m con geometría hexagonal y estructura segmentada para facilitar transporte y mantenimiento.</p>
+                    <p>POSTEDOR es una solución integral de infraestructura energética inteligente que combina poste de distribución eléctrica, panel solar, transformador toroidal y estación de carga para vehículos eléctricos (VE) en un único sistema modular y estético. El poste metálico de 12 metros se divide en <strong>4 partes funcionales</strong>, cada una con un propósito específico:</p>
                     <ul class="feature-list">
                         <li>Integración estructural: poste, transformador y cargador en una sola unidad</li>
                         <li>Sin aceite ni ventiladores — disipación térmica pasiva</li>
@@ -61,34 +60,82 @@
 
             <div class="section-header fade-in" style="margin-top: 60px;">
                 <span class="section-tag">Arquitectura</span>
-                <h2>Estructura del Poste</h2>
+                <h2>Las 4 Partes del POSTEDOR</h2>
             </div>
 
-            <div class="feature-row reverse fade-in">
-                <div class="feature-content slide-in-right">
-                    <h3>Tramos del Poste</h3>
-                    <p>El poste metálico de 12 metros se divide en 3 tramos funcionales que albergan los diferentes componentes del sistema:</p>
+            <div class="feature-row fade-in" style="margin-top: 40px;">
+                <div class="feature-content slide-in-left">
+                    <h3 style="color:#E65100;">Parte A — Cargador de Vehículos Eléctricos</h3>
+                    <p>En la base del poste se encuentra el <strong>cargador EV integrado</strong>, disponible en potencias de 5, 10, 15 y 20 kVA. Incluye manguera Tipo 2 universal de 5 metros con adaptadores para Tipo 1, CHAdeMO, GB/T y Tesla. Protocolo OCPP 2.0.1 con conectividad a la red de EPM.</p>
                     <ul class="feature-list">
-                        <li><strong>Tramo 3 (Superior):</strong> Media tensión (13.2 kV) y paneles solares</li>
-                        <li><strong>Tramo 2 (Medio):</strong> Transformador toroidal y módulo IoT</li>
-                        <li><strong>Tramo 1 (Base):</strong> Cargador de vehículos eléctricos y bornera LV</li>
+                        <li>5 modelos de potencia: 5/10/15/20 kVA — Carga rápida hasta 16 kW</li>
+                        <li>Manguera Tipo 2 estándar + 4 adaptadores incluidos</li>
+                        <li>Pago con Tarjeta EPM, Débito, Crédito y Blockchain</li>
                     </ul>
-                    <p>El diseño segmentado facilita el transporte, la instalación y el mantenimiento, permitiendo el acceso independiente a cada componente sin desmontar todo el sistema.</p>
+                    <a href="parte-a.html" class="btn btn-outline" style="margin-top:12px;">Ver Parte A →</a>
+                </div>
+                <div class="image-placeholder slide-in-right" style="background:none;border:none;padding:0;">
+                    <img src="../images/parte-a.png" alt="Parte A — Cargador EV" style="width:100%;height:auto;border-radius:var(--radius);max-height:220px;object-fit:cover;" onerror="this.innerHTML='<div style=\"display:flex;align-items:center;justify-content:center;height:200px;background:var(--ps-light);border-radius:var(--radius);color:#E65100;font-size:1.2rem;font-weight:600;\">Parte A — Cargador</div>'">
+                </div>
+            </div>
+
+            <div class="feature-row reverse fade-in" style="margin-top: 40px;">
+                <div class="feature-content slide-in-right">
+                    <h3 style="color:#7b1fa2;">Parte B — Módulo IoT y Telemetría</h3>
+                    <p>En el tramo medio del poste se aloja el <strong>módulo IoT</strong> con comunicación vía SIM Claro 4G/5G hacia EPM. Equipado con sensores de tensión, corriente, temperatura PT100 en el núcleo del transformador, humedad y presión. Incluye sistema Blockchain para pagos descentralizados.</p>
+                    <ul class="feature-list">
+                        <li>SIM Claro M2M — Comunicación directa con EPM</li>
+                        <li>Sensores: CTs de tensión/corriente, PT100, humedad, presión</li>
+                        <li>Blockchain Polygon L2 — Pagos con USDC, USDT y POST token</li>
+                    </ul>
+                    <a href="parte-b.html" class="btn btn-outline" style="margin-top:12px;">Ver Parte B →</a>
                 </div>
                 <div class="image-placeholder slide-in-left" style="background:none;border:none;padding:0;">
-                    <img src="../images/poste-paneles.svg" alt="Estructura del poste" style="width:100%;height:auto;border-radius:var(--radius);" onerror="this.parentElement.innerHTML='<div style=\"display:flex;align-items:center;justify-content:center;height:300px;background:var(--ps-light);border-radius:var(--radius);color:var(--ps-primary);font-size:1rem;\">Diagrama estructural del poste</div>'">
+                    <img src="../images/parte-b.png" alt="Parte B — Módulo IoT" style="width:100%;height:auto;border-radius:var(--radius);max-height:220px;object-fit:cover;" onerror="this.innerHTML='<div style=\"display:flex;align-items:center;justify-content:center;height:200px;background:var(--ps-light);border-radius:var(--radius);color:#7b1fa2;font-size:1.2rem;font-weight:600;\">Parte B — IoT</div>'">
                 </div>
             </div>
 
-            <div class="feature-row fade-in">
+            <div class="feature-row fade-in" style="margin-top: 40px;">
+                <div class="feature-content slide-in-left">
+                    <h3 style="color:#D32F2F;">Parte C — Transformador Toroidal 5kVA</h3>
+                    <p>En el centro del poste se encuentra el <strong>transformador toroidal monofásico</strong> de 5kVA con núcleo de acero al silicio M4 de grano orientado. Bobinado primario de 3933 espiras (13.2 kV) y secundario de 72 espiras (240/120 V). Aislamiento clase B con papel dieléctrico Nomex 410. Disipación térmica pasiva mediante spider de aluminio hacia las paredes del poste.</p>
+                    <ul class="feature-list">
+                        <li>5kVA — OD=300mm, ID=150mm, H=160mm — Pérdidas totales: 207.4 W</li>
+                        <li>Bobinado horario con Nomex 410 entre capas</li>
+                        <li>Temperatura máxima validada FEM: 107.7°C (Clase B: 130°C)</li>
+                    </ul>
+                    <a href="parte-c.html" class="btn btn-outline" style="margin-top:12px;">Ver Parte C →</a>
+                </div>
+                <div class="image-placeholder slide-in-right" style="background:none;border:none;padding:0;">
+                    <img src="../images/parte-c.png" alt="Parte C — Transformador" style="width:100%;height:auto;border-radius:var(--radius);max-height:220px;object-fit:cover;" onerror="this.innerHTML='<div style=\"display:flex;align-items:center;justify-content:center;height:200px;background:var(--ps-light);border-radius:var(--radius);color:#D32F2F;font-size:1.2rem;font-weight:600;\">Parte C — Transformador</div>'">
+                </div>
+            </div>
+
+            <div class="feature-row reverse fade-in" style="margin-top: 40px;">
+                <div class="feature-content slide-in-right">
+                    <h3 style="color:#2E7D32;">Parte D — Media Tensión y 4 Paneles Solares</h3>
+                    <p>En el tramo superior del poste llega la acometida de <strong>media tensión (13.2 kV)</strong> desde la red de EPM. El conductor llega desnudo (ACSR), se convierte a cable XLPE de 15 kV dentro del poste, y luego a cable encauchetado antes de entrar al transformador. Adicionalmente, <strong>4 paneles solares de 200W</strong> (800W total) se montan en disposición intercalada izquierdo-frontal con separación de 90 cm.</p>
+                    <ul class="feature-list">
+                        <li>Entrada MT: Desnudo ACSR → XLPE 15 kV → Encauchetado → Transformador</li>
+                        <li>4 paneles × 200W = 800Wp — Disposición intercalada</li>
+                        <li>Inversor PV 800W + SPD AC</li>
+                    </ul>
+                    <a href="parte-d.html" class="btn btn-outline" style="margin-top:12px;">Ver Parte D →</a>
+                </div>
+                <div class="image-placeholder slide-in-left" style="background:none;border:none;padding:0;">
+                    <img src="../images/parte-d.png" alt="Parte D — MT y Paneles" style="width:100%;height:auto;border-radius:var(--radius);max-height:220px;object-fit:cover;" onerror="this.innerHTML='<div style=\"display:flex;align-items:center;justify-content:center;height:200px;background:var(--ps-light);border-radius:var(--radius);color:#2E7D32;font-size:1.2rem;font-weight:600;\">Parte D — MT + Paneles</div>'">
+                </div>
+            </div>
+
+            <div class="feature-row fade-in" style="margin-top: 60px;">
                 <div class="feature-content slide-in-left">
                     <h3>Diagrama Unifilar</h3>
                     <p>El sistema eléctrico de POSTEDOR conecta la red de media tensión (13.2 kV) con el transformador toroidal que reduce a 240/120 V, alimentando el cargador EV, el módulo IoT y el inversor solar.</p>
                     <ul class="feature-list">
-                        <li>Red MT 13.2 kV → Elbow (buje) → Transformador 15 kVA</li>
+                        <li>Red MT 13.2 kV → Elbow (buje) → Transformador 5kVA</li>
                         <li>Salida BT 240/120 V → SPD AC → Bornera LV / MCB 63 A</li>
                         <li>Cargador EV 7.4 kW (32 A) en la base</li>
-                        <li>CTs / Medidor + Inversor PV 3 kW + Comp. IoT</li>
+                        <li>CTs / Medidor + Inversor PV 800W + Comp. IoT</li>
                     </ul>
                 </div>
                 <div class="image-placeholder slide-in-right" style="background:none;border:none;padding:0;">
