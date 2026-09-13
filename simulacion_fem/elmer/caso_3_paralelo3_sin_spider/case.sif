@@ -23,7 +23,7 @@ Material 2  ! Steel (post wall)
 End
 
 Material 3  ! Transformer (windings+core average)
-  Name = "Transformer 5kVA"
+  Name = "Transformer 7kVA"
   Density = 5000.0
   Heat Conductivity = 100.0  ! Al+Fe weighted avg
   Heat Capacity = 600.0
@@ -92,7 +92,7 @@ End
 
 Body Force 1
   Name = "Transformer_Heat"
-  Heat Source = 4.8902
+  Heat Source = 7.4308
 End
 
 !===========================================================

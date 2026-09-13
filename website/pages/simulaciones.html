@@ -33,23 +33,23 @@
     <main>
         <section class="page-header simulaciones">
             <h1>Simulaciones Térmicas FEM</h1>
-            <p>Análisis por elementos finitos del transformador toroidal 5kVA dentro del poste Postedor</p>
+            <p>Análisis por elementos finitos del transformador toroidal 7kVA dentro del poste Postedor</p>
         </section>
 
         <section class="content-section">
             <div class="feature-row fade-in">
                 <div class="feature-content">
                     <h3>Modelo de Simulación</h3>
-                    <p>Simulación termo-eléctrica en estado estacionario usando <strong>Elmer FEM</strong> con geometría 1/4 de simetría. Se evaluaron 4 configuraciones de carga (5/10/15/20 kVA), cada una con y sin spider térmico de aluminio.</p>
+                    <p>Simulación termo-eléctrica en estado estacionario usando <strong>Elmer FEM</strong> con geometría 1/4 de simetría. Se evaluaron 4 configuraciones (7/14/21/28 kVA), cada una con y sin spider térmico de aluminio.</p>
                     <ul class="feature-list">
                         <li><strong>Software:</strong> Elmer FEM — Solver Heat Equation</li>
-                        <li><strong>Geometría:</strong> 1/4 simetría, poste 350×350mm, pared 5mm acero</li>
-                        <li><strong>Transformador:</strong> OD=300mm, ID=150mm, H=160mm (volumen anular toroidal)</li>
-                        <li><strong>Pérdidas base (5kVA):</strong> Cu=149W + Fe=58.4W = <strong>207.4W</strong></li>
+                        <li><strong>Geometría:</strong> 1/4 simetría, poste 340×340mm, pared 5mm acero</li>
+                        <li><strong>Transformador:</strong> OD=260mm, ID=143mm, H=130mm (volumen anular toroidal)</li>
+                        <li><strong>Pérdidas base (7kVA):</strong> Cu=134.7W + Fe=44.2W = <strong>178.9W</strong></li>
                         <li><strong>Conductividad aire efectiva:</strong> 10 W/mK (~400× molecular) para modelar efecto chimenea en poste de 12m</li>
                         <li><strong>Convección exterior:</strong> h=7.5 W/m²K, T∞=30°C</li>
                         <li><strong>Spider aluminio 6063-T5:</strong> 4 brazos por transformador, sección 20×5mm, k=200 W/mK</li>
-                        <li><strong>Límite Clase B:</strong> 130°C (aislamiento devanados)</li>
+                        <li><strong>Límite Clase F:</strong> 155°C (aislamiento devanados)</li>
                     </ul>
                 </div>
             </div>
@@ -68,94 +68,94 @@
                             <th style="padding:12px 16px;text-align:center;">Tmax</th>
                             <th style="padding:12px 16px;text-align:center;">Tmin</th>
                             <th style="padding:12px 16px;text-align:center;">Tavg</th>
-                            <th style="padding:12px 16px;text-align:center;">Límite B</th>
+                            <th style="padding:12px 16px;text-align:center;">Límite F</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr style="border-bottom:1px solid var(--border);">
                             <td style="padding:10px 16px;font-weight:600;">1</td>
-                            <td style="padding:10px 16px;text-align:center;">5 kVA</td>
-                            <td style="padding:10px 16px;text-align:center;">207 W</td>
+                            <td style="padding:10px 16px;text-align:center;">7 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">179 W</td>
                             <td style="padding:10px 16px;text-align:center;">No</td>
-                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">107.7°C</td>
-                            <td style="padding:10px 16px;text-align:center;">101.3°C</td>
-                            <td style="padding:10px 16px;text-align:center;">105.0°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">103.6°C</td>
+                            <td style="padding:10px 16px;text-align:center;">96.3°C</td>
+                            <td style="padding:10px 16px;text-align:center;">100.1°C</td>
                             <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
                         </tr>
                         <tr style="border-bottom:1px solid var(--border);background:var(--ps-light);">
                             <td style="padding:10px 16px;font-weight:600;">1</td>
-                            <td style="padding:10px 16px;text-align:center;">5 kVA</td>
-                            <td style="padding:10px 16px;text-align:center;">207 W</td>
+                            <td style="padding:10px 16px;text-align:center;">7 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">179 W</td>
                             <td style="padding:10px 16px;text-align:center;">Sí</td>
-                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">106.2°C</td>
-                            <td style="padding:10px 16px;text-align:center;">101.1°C</td>
-                            <td style="padding:10px 16px;text-align:center;">104.4°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">101.0°C</td>
+                            <td style="padding:10px 16px;text-align:center;">96.3°C</td>
+                            <td style="padding:10px 16px;text-align:center;">99.3°C</td>
                             <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
                         </tr>
                         <tr style="border-bottom:1px solid var(--border);">
                             <td style="padding:10px 16px;font-weight:600;">2</td>
-                            <td style="padding:10px 16px;text-align:center;">10 kVA</td>
-                            <td style="padding:10px 16px;text-align:center;">415 W</td>
+                            <td style="padding:10px 16px;text-align:center;">14 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">358 W</td>
                             <td style="padding:10px 16px;text-align:center;">No</td>
-                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">117.7°C</td>
-                            <td style="padding:10px 16px;text-align:center;">110.3°C</td>
-                            <td style="padding:10px 16px;text-align:center;">114.7°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">114.4°C</td>
+                            <td style="padding:10px 16px;text-align:center;">106.0°C</td>
+                            <td style="padding:10px 16px;text-align:center;">110.6°C</td>
                             <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
                         </tr>
                         <tr style="border-bottom:1px solid var(--border);background:var(--ps-light);">
                             <td style="padding:10px 16px;font-weight:600;">2</td>
-                            <td style="padding:10px 16px;text-align:center;">10 kVA</td>
-                            <td style="padding:10px 16px;text-align:center;">415 W</td>
+                            <td style="padding:10px 16px;text-align:center;">14 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">358 W</td>
                             <td style="padding:10px 16px;text-align:center;">Sí</td>
-                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">115.9°C</td>
-                            <td style="padding:10px 16px;text-align:center;">110.1°C</td>
-                            <td style="padding:10px 16px;text-align:center;">114.1°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">111.4°C</td>
+                            <td style="padding:10px 16px;text-align:center;">106.0°C</td>
+                            <td style="padding:10px 16px;text-align:center;">109.6°C</td>
                             <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
                         </tr>
                         <tr style="border-bottom:1px solid var(--border);">
                             <td style="padding:10px 16px;font-weight:600;">3</td>
-                            <td style="padding:10px 16px;text-align:center;">15 kVA</td>
-                            <td style="padding:10px 16px;text-align:center;">622 W</td>
+                            <td style="padding:10px 16px;text-align:center;">21 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">537 W</td>
                             <td style="padding:10px 16px;text-align:center;">No</td>
-                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">121.9°C</td>
-                            <td style="padding:10px 16px;text-align:center;">113.7°C</td>
-                            <td style="padding:10px 16px;text-align:center;">118.6°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">119.1°C</td>
+                            <td style="padding:10px 16px;text-align:center;">109.8°C</td>
+                            <td style="padding:10px 16px;text-align:center;">114.9°C</td>
                             <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
                         </tr>
                         <tr style="border-bottom:1px solid var(--border);background:var(--ps-light);">
                             <td style="padding:10px 16px;font-weight:600;">3</td>
-                            <td style="padding:10px 16px;text-align:center;">15 kVA</td>
-                            <td style="padding:10px 16px;text-align:center;">622 W</td>
+                            <td style="padding:10px 16px;text-align:center;">21 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">537 W</td>
                             <td style="padding:10px 16px;text-align:center;">Sí</td>
-                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">120.0°C</td>
-                            <td style="padding:10px 16px;text-align:center;">113.6°C</td>
-                            <td style="padding:10px 16px;text-align:center;">117.9°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">115.8°C</td>
+                            <td style="padding:10px 16px;text-align:center;">109.8°C</td>
+                            <td style="padding:10px 16px;text-align:center;">113.8°C</td>
                             <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
                         </tr>
                         <tr style="border-bottom:1px solid var(--border);">
                             <td style="padding:10px 16px;font-weight:600;">4</td>
-                            <td style="padding:10px 16px;text-align:center;">20 kVA</td>
-                            <td style="padding:10px 16px;text-align:center;">830 W</td>
+                            <td style="padding:10px 16px;text-align:center;">28 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">716 W</td>
                             <td style="padding:10px 16px;text-align:center;">No</td>
-                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">124.0°C</td>
-                            <td style="padding:10px 16px;text-align:center;">115.4°C</td>
-                            <td style="padding:10px 16px;text-align:center;">120.6°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">121.5°C</td>
+                            <td style="padding:10px 16px;text-align:center;">111.7°C</td>
+                            <td style="padding:10px 16px;text-align:center;">117.2°C</td>
                             <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
                         </tr>
                         <tr style="border-bottom:2px solid var(--ps-primary);background:var(--ps-light);">
                             <td style="padding:10px 16px;font-weight:600;">4</td>
-                            <td style="padding:10px 16px;text-align:center;">20 kVA</td>
-                            <td style="padding:10px 16px;text-align:center;">830 W</td>
+                            <td style="padding:10px 16px;text-align:center;">28 kVA</td>
+                            <td style="padding:10px 16px;text-align:center;">716 W</td>
                             <td style="padding:10px 16px;text-align:center;">Sí</td>
-                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">122.1°C</td>
-                            <td style="padding:10px 16px;text-align:center;">115.3°C</td>
-                            <td style="padding:10px 16px;text-align:center;">119.9°C</td>
+                            <td style="padding:10px 16px;text-align:center;color:#e53935;font-weight:700;">118.1°C</td>
+                            <td style="padding:10px 16px;text-align:center;">111.8°C</td>
+                            <td style="padding:10px 16px;text-align:center;">116.1°C</td>
                             <td style="padding:10px 16px;text-align:center;color:#43a047;font-weight:600;">✓</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p style="text-align:center;margin-top:12px;color:var(--text-light);font-size:0.85rem;">Los 8 casos cumplen con el límite Clase B (130°C). Diferencia spider vs sin-spider: ~2°C (la resistencia dominante es la convección externa).</p>
+            <p style="text-align:center;margin-top:12px;color:var(--text-light);font-size:0.85rem;">Los 8 casos cumplen con el límite Clase F (155°C). Diferencia spider vs sin-spider: ~2.5-3°C (la resistencia dominante es la convección natural en la pared exterior).</p>
         </section>
 
         <section class="content-section">
@@ -197,19 +197,19 @@
             <h3 style="text-align:center;">Análisis de Resultados</h3>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:1.5rem;">
                 <div style="background:white;padding:1.5rem;border-radius:var(--radius);text-align:center;">
-                    <div style="font-size:2.5rem;font-weight:800;color:#e53935;">124.0°C</div>
-                    <div style="font-size:0.9rem;color:var(--text-light);">Tmax peor caso (20 kVA, sin spider)</div>
+                    <div style="font-size:2.5rem;font-weight:800;color:#e53935;">121.5°C</div>
+                    <div style="font-size:0.9rem;color:var(--text-light);">Tmax peor caso (28 kVA, sin spider) = 121.5 °C</div>
                 </div>
                 <div style="background:white;padding:1.5rem;border-radius:var(--radius);text-align:center;">
-                    <div style="font-size:2.5rem;font-weight:800;color:#43a047;">~2°C</div>
+                    <div style="font-size:2.5rem;font-weight:800;color:#43a047;">~2.5-3°C</div>
                     <div style="font-size:0.9rem;color:var(--text-light);">Diferencia spider vs sin spider</div>
                 </div>
                 <div style="background:white;padding:1.5rem;border-radius:var(--radius);text-align:center;">
                     <div style="font-size:2.5rem;font-weight:800;color:#1b5e20;">100%</div>
-                    <div style="font-size:0.9rem;color:var(--text-light);">Casos bajo límite Clase B (130°C)</div>
+                    <div style="font-size:0.9rem;color:var(--text-light);">Casos bajo límite Clase F (155°C)</div>
                 </div>
             </div>
-            <p style="margin-top:1.5rem;color:var(--text-light);font-size:0.9rem;text-align:center;">El spider térmico de aluminio reduce la temperatura unos 2°C en todos los casos, pero la resistencia térmica dominante es la convección natural en la pared exterior del poste. Para cargas >20 kVA se recomienda aislamiento Clase H (180°C) o refrigeración forzada.</p>
+            <p style="margin-top:1.5rem;color:var(--text-light);font-size:0.9rem;text-align:center;">El spider térmico de aluminio reduce ~2.5-3 °C; la resistencia térmica dominante es la convección natural en la pared exterior. Todos los modelos cumplen aislamiento Clase F (155 °C) con margen ≥34 °C.</p>
         </section>
 
         <section class="content-section">
@@ -219,14 +219,14 @@
                 ├── run_simulation.py          &lt;-- Script principal<br>
                 ├── _parse_ep.py               &lt;-- Extrae temperaturas de resultados<br>
                 ├── _report.py                 &lt;-- Genera reportes<br>
-                ├── caso_1_solo_con_spider/    &lt;-- 5 kVA con spider<br>
-                ├── caso_1_solo_sin_spider/    &lt;-- 5 kVA sin spider<br>
-                ├── caso_2_paralelo2_con_spider/<br>
-                ├── caso_2_paralelo2_sin_spider/<br>
-                ├── caso_3_paralelo3_con_spider/<br>
-                ├── caso_3_paralelo3_sin_spider/<br>
-                ├── caso_4_paralelo4_con_spider/  &lt;-- 20 kVA con spider<br>
-                ├── caso_4_paralelo4_sin_spider/  &lt;-- 20 kVA sin spider<br>
+                ├── caso_1_solo_con_spider/    &lt;-- 7 kVA con spider<br>
+                ├── caso_1_solo_sin_spider/    &lt;-- 7 kVA sin spider<br>
+                ├── caso_2_paralelo2_con_spider/  &lt;-- 14 kVA con spider<br>
+                ├── caso_2_paralelo2_sin_spider/  &lt;-- 14 kVA sin spider<br>
+                ├── caso_3_paralelo3_con_spider/  &lt;-- 21 kVA con spider<br>
+                ├── caso_3_paralelo3_sin_spider/  &lt;-- 21 kVA sin spider<br>
+                ├── caso_4_paralelo4_con_spider/  &lt;-- 28 kVA con spider<br>
+                ├── caso_4_paralelo4_sin_spider/  &lt;-- 28 kVA sin spider<br>
                 └── template/                 &lt;-- Plantilla GDF para malla<br>
                 <br>
                 simulacion_fem/planos/<br>

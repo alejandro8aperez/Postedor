@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-POSTEDOR — Thermal FEM simulation of 5kVA toroidal transformer inside post
+POSTEDOR — Thermal FEM simulation of 7kVA toroidal transformer inside post
 Creates Elmer mesh files and SIF, runs ElmerSolver
-4 cases: 1, 2, 3, 4 transformers in parallel
+4 cases: 1, 2, 3, 4 transformers in parallel (7/14/21/28 kVA)
+Transformer mounted HORIZONTAL inside post (OD defines post width ~288mm)
 """
 import os, sys, json, shutil, subprocess
 
@@ -17,17 +18,20 @@ with open(os.path.join(DESIGN, "configs.json")) as f:
     CONFIGS = json.load(f)
 
 # --- Geometry parameters (1/4 symmetry) ---
+# Transformer 7kVA (from design/calculator.py):
+#   OD=260mm ID=143mm Hc=130mm  -> TRANS_OD=OD/2 TRANS_ID=ID/2 TRANS_H=Hc
+# Post: internal width = OD + 2*35mm clearance ; WALL_T=5mm  -> BOX_W = post_outer/2
 WALL_T = 0.005     # post wall thickness (m)
-BOX_W = 0.175      # half-width of post = 0.350/2 (symmetry)
-BOX_D = 0.175      # half-depth
-TRANS_OD = 0.150   # transformer outer radius
-TRANS_ID = 0.075   # transformer inner radius
-TRANS_H = 0.160    # transformer total height (core 0.12 + winding overhang)
-TRANS_H_CORE = 0.120  # core height only (for volume calc)
+BOX_W = 0.170      # half-width of post = 0.340/2 (symmetry)
+BOX_D = 0.170      # half-depth
+TRANS_OD = 0.130   # transformer outer radius (OD/2)
+TRANS_ID = 0.0715  # transformer inner radius (ID/2)
+TRANS_H = 0.130    # transformer total height (core height, horizontal mount)
+TRANS_H_CORE = 0.130  # core height only (for volume calc)
 GAP_Y = 0.040      # gap between transformers
 MARGIN = 0.050     # margin above/below
 
-HEAT_CAPACITY = 32.6e3  # W/m3 per transformer (from calculator)
+HEAT_CAPACITY = 32.6e3  # W/m3 per transformer (placeholder, real from configs)
 
 # --- Post section ---
 # Wall in X: x=0..BOX_INNER is air, x=BOX_INNER..BOX_W is steel
@@ -338,7 +342,7 @@ Material 2  ! Steel (post wall)
 End
 
 Material 3  ! Transformer (windings+core average)
-  Name = "Transformer 5kVA"
+  Name = "Transformer 7kVA"
   Density = 5000.0
   Heat Conductivity = 100.0  ! Al+Fe weighted avg
   Heat Capacity = 600.0
@@ -461,7 +465,7 @@ def run_case(n_trans, use_spider=False):
     os.makedirs(os.path.join(case_dir, "mesh"))
     os.makedirs(os.path.join(case_dir, "results"))
 
-    label = f"{cfg['n']}x5kVA = {cfg['S_kVA']}kVA"
+    label = f"{cfg['n']}x7kVA = {cfg['S_kVA']:.0f}kVA"
     print(f"\n{'='*60}")
     print(f"{'CON SPIDER' if use_spider else 'SIN SPIDER'} — CASO {n_trans}: {label}")
     print(f"  Lost: Cu={cfg['P_cu_W']:.0f}W  Fe={cfg['P_fe_W']:.0f}W  Total={cfg['P_total_W']:.0f}W")

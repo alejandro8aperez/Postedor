@@ -66,9 +66,9 @@
             <div class="feature-row fade-in" style="margin-top: 40px;">
                 <div class="feature-content slide-in-left">
                     <h3 style="color:#E65100;">Parte A — Cargador de Vehículos Eléctricos</h3>
-                    <p>En la base del poste se encuentra el <strong>cargador EV integrado</strong>, disponible en potencias de 5, 10, 15 y 20 kVA. Incluye manguera Tipo 2 universal de 5 metros con adaptadores para Tipo 1, CHAdeMO, GB/T y Tesla. Protocolo OCPP 2.0.1 con conectividad a la red de EPM.</p>
+                    <p>En la base del poste se encuentran uno o varios <strong>cargadores EV integrados</strong>, AC monofásicos de 7.4 kW (32 A, Modo 3, conector Tipo 2), en modelos de 7, 14, 21 y 28 kVA. Incluyen manguera Tipo 2 universal de 5 metros con adaptadores para Tipo 1, CHAdeMO, GB/T y Tesla. Protocolo OCPP 2.0.1 con conectividad a la red de EPM.</p>
                     <ul class="feature-list">
-                        <li>5 modelos de potencia: 5/10/15/20 kVA — Carga rápida hasta 16 kW</li>
+                        <li>4 modelos de potencia: 7/14/21/28 kVA — 7.4 kW por cargador (hasta 4 cargadores)</li>
                         <li>Manguera Tipo 2 estándar + 4 adaptadores incluidos</li>
                         <li>Pago con Tarjeta EPM, Débito, Crédito y Blockchain</li>
                     </ul>
@@ -97,12 +97,12 @@
 
             <div class="feature-row fade-in" style="margin-top: 40px;">
                 <div class="feature-content slide-in-left">
-                    <h3 style="color:#D32F2F;">Parte C — Transformador Toroidal 5kVA</h3>
-                    <p>En el centro del poste se encuentra el <strong>transformador toroidal monofásico</strong> de 5kVA con núcleo de acero al silicio M4 de grano orientado. Bobinado primario de 3933 espiras (13.2 kV) y secundario de 72 espiras (240/120 V). Aislamiento clase B con papel dieléctrico Nomex 410. Disipación térmica pasiva mediante spider de aluminio hacia las paredes del poste.</p>
+                    <h3 style="color:#D32F2F;">Parte C — Transformador Toroidal 7kVA</h3>
+                    <p>En el centro del poste se encuentra el <strong>transformador toroidal monofásico</strong> de 7 kVA con núcleo de acero al silicio M4 de grano orientado. Bobinado primario de 2687 espiras (7620 V) y secundario de 85 espiras (240/120 V). Aislamiento Clase F con papel dieléctrico Nomex 410. Disipación térmica pasiva mediante spider de aluminio hacia las paredes del poste.</p>
                     <ul class="feature-list">
-                        <li>5kVA — OD=300mm, ID=150mm, H=160mm — Pérdidas totales: 207.4 W</li>
+                        <li>7kVA — OD=260mm, ID=143mm, H=130mm — Pérdidas: 178.9 W por toroidal</li>
                         <li>Bobinado horario con Nomex 410 entre capas</li>
-                        <li>Temperatura máxima validada FEM: 107.7°C (Clase B: 130°C)</li>
+                        <li>Temperatura máxima validada FEM: 101°C (Clase F: 155°C)</li>
                     </ul>
                     <a href="parte-c.html" class="btn btn-outline" style="margin-top:12px;">Ver Parte C →</a>
                 </div>
@@ -114,7 +114,7 @@
             <div class="feature-row reverse fade-in" style="margin-top: 40px;">
                 <div class="feature-content slide-in-right">
                     <h3 style="color:#2E7D32;">Parte D — Media Tensión y 4 Paneles Solares</h3>
-                    <p>En el tramo superior del poste llega la acometida de <strong>media tensión (13.2 kV)</strong> desde la red de EPM. El conductor llega desnudo (ACSR), se convierte a cable XLPE de 15 kV dentro del poste, y luego a cable encauchetado antes de entrar al transformador. Adicionalmente, <strong>4 paneles solares de 200W</strong> (800W total) se montan en disposición intercalada izquierdo-frontal con separación de 90 cm.</p>
+                    <p>En el tramo superior del poste llega la acometida de <strong>media tensión (13.2 kV)</strong> desde la red de EPM. El conductor llega desnudo (ACSR), se convierte a cable XLPE de 15 kV dentro del poste, y luego a cable encauchetado antes de entrar al transformador (cuya primaria, fase a neutro, es de 7620 V). Adicionalmente, <strong>4 paneles solares de 200W</strong> (800W total) se montan en disposición intercalada izquierdo-frontal con separación de 90 cm.</p>
                     <ul class="feature-list">
                         <li>Entrada MT: Desnudo ACSR → XLPE 15 kV → Encauchetado → Transformador</li>
                         <li>4 paneles × 200W = 800Wp — Disposición intercalada</li>
@@ -130,9 +130,9 @@
             <div class="feature-row fade-in" style="margin-top: 60px;">
                 <div class="feature-content slide-in-left">
                     <h3>Diagrama Unifilar</h3>
-                    <p>El sistema eléctrico de POSTEDOR conecta la red de media tensión (13.2 kV) con el transformador toroidal que reduce a 240/120 V, alimentando el cargador EV, el módulo IoT y el inversor solar.</p>
+                    <p>El sistema eléctrico de POSTEDOR conecta la red de media tensión (13.2 kV) con el transformador toroidal monofásico (primario 7620 V fase a neutro) que reduce a 240/120 V, alimentando el cargador EV, el módulo IoT y el inversor solar.</p>
                     <ul class="feature-list">
-                        <li>Red MT 13.2 kV → Elbow (buje) → Transformador 5kVA</li>
+                        <li>Red MT 13.2 kV → Elbow → Transformador 7 kVA (×4 en paralelo, primaria 7620 V)</li>
                         <li>Salida BT 240/120 V → SPD AC → Bornera LV / MCB 63 A</li>
                         <li>Cargador EV 7.4 kW (32 A) en la base</li>
                         <li>CTs / Medidor + Inversor PV 800W + Comp. IoT</li>

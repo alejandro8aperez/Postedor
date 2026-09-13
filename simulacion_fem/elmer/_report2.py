@@ -2,10 +2,10 @@ import os
 
 base = r"C:\Postgres\Postedor\simulacion_fem\elmer"
 cases = [
-    ("caso_1_solo", "1×5kVA = 5kVA"),
-    ("caso_2_paralelo2", "2×5kVA = 10kVA"),
-    ("caso_3_paralelo3", "3×5kVA = 15kVA"),
-    ("caso_4_paralelo4", "4×5kVA = 20kVA"),
+    ("caso_1_solo", "1×7kVA = 7kVA"),
+    ("caso_2_paralelo2", "2×7kVA = 14kVA"),
+    ("caso_3_paralelo3", "3×7kVA = 21kVA"),
+    ("caso_4_paralelo4", "4×7kVA = 28kVA"),
 ]
 
 print(f"{'Configuración':<22} {'T_max':>7} {'T_min':>7} {'T_avg':>7} {'h_secc':>7}")

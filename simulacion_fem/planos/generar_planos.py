@@ -1,5 +1,5 @@
 """
-Genera planos DXF del transformador toroidal 5kVA dentro del poste Postedor
+Genera planos DXF del transformador toroidal 7kVA dentro del poste Postedor
 para abrir en NanoCAD.
 Planos: 1-planta 2-lateral 3-spider 4-termico
 """
@@ -8,12 +8,12 @@ import ezdxf
 from ezdxf import units
 from ezdxf.enums import TextEntityAlignment
 
-POST_OD = 350
+POST_OD = 340
 WALL_T = 5
 POST_ID = POST_OD - 2 * WALL_T
-TRANS_OD = 300
-TRANS_ID = 150
-TRANS_H = 160
+TRANS_OD = 260
+TRANS_ID = 143
+TRANS_H = 130
 GAP_Y = 40
 MARGIN = 50
 
@@ -81,10 +81,10 @@ def make_plan():
     # Transformador
     msp.add_circle((cx,cy), TRANS_OD/2, dxfattribs={"color": C_CORE, "lineweight": 35})
     msp.add_circle((cx,cy), TRANS_ID/2, dxfattribs={"color": C_CORE, "lineweight": 35})
-    msp.add_circle((cx,cy), 100, dxfattribs={"color": C_COPPER, "linetype": "DASHED"})
-    msp.add_circle((cx,cy), 125, dxfattribs={"color": C_COPPER, "linetype": "DASHED"})
+    msp.add_circle((cx,cy), 90, dxfattribs={"color": C_COPPER, "linetype": "DASHED"})
+    msp.add_circle((cx,cy), 120, dxfattribs={"color": C_COPPER, "linetype": "DASHED"})
 
-    # Spider 4 brazos
+# Spider 4 brazos
     for ang in [45, 135, 225, 315]:
         r = math.radians(ang)
         r1 = TRANS_OD/2 + 2
@@ -97,10 +97,10 @@ def make_plan():
     dim(msp, (0,0), (POST_OD,0), offset=(0,-20))
     dim(msp, (0,POST_OD/2), (WALL_T,POST_OD/2), offset=(POST_OD+10,0))
     dim_diameter(msp, cx, cy, TRANS_OD)
-    dim_diameter(msp, cx, cy, TRANS_ID, "⌀150")
+    dim_diameter(msp, cx, cy, TRANS_ID, "143")
 
-    label(msp, (POST_OD/2, POST_OD+20), "POSTE 350×350×5mm — ACERO GALVANIZADO", h=3)
-    label(msp, (POST_OD/2, -35), "TRANSFORMADOR TOROIDAL 5kVA  OD=300  ID=150  H=160")
+    label(msp, (POST_OD/2, POST_OD+20), "POSTE 340×340×5mm — ACERO GALVANIZADO", h=3)
+    label(msp, (POST_OD/2, -35), "TRANSFORMADOR TOROIDAL 7kVA  OD=260  ID=143  H=130  (MONTAGE HORIZONTAL)")
     label(msp, (cx+120, cy+120), "BRAZO SPIDER AL 6063 ×4", color=C_AL, h=2.5, align="LEFT")
 
     doc.saveas(os.path.join(OUT, "plano_01_planta.dxf"))
@@ -141,13 +141,13 @@ def make_lateral():
         ym = (yb+yt)/2
         msp.add_line((WALL_T,ym),(xl,ym), dxfattribs={"color": C_AL, "lineweight": 40})
         msp.add_line((pw-WALL_T,ym),(xr,ym), dxfattribs={"color": C_AL, "lineweight": 40})
-        label(msp, ((xl+xr)/2, ym-3), "5kVA", h=6)
+        label(msp, ((xl+xr)/2, ym-3), "7kVA", h=6)
 
     label(msp, (pw+15, MARGIN/2), "MARGEN")
     label(msp, (pw+15, MARGIN+TRANS_H+GAP_Y/2), f"GAP {GAP_Y}")
     dim(msp, (0,0), (0,th), offset=(-20,0))
     dim(msp, (0,MARGIN), (0,MARGIN+TRANS_H), offset=(-20,0))
-    label(msp, (pw/2, th+15), f"CORTE VERTICAL — 4×5kVA = 20kVA  Altura total {th}mm", h=3.5)
+    label(msp, (pw/2, th+15), f"CORTE VERTICAL — 4×7kVA = 28kVA  Altura total {th}mm", h=3.5)
 
     doc.saveas(os.path.join(OUT, "plano_02_lateral.dxf"))
     print("  OK plano_02_lateral.dxf")
@@ -199,13 +199,13 @@ def make_termico():
 
     # Isotermas
     msp.add_circle((cx,cy), 50, dxfattribs={"color": C_HOT, "lineweight": 20})
-    label(msp, (cx,cy), "124°C", color=C_HOT)
+    label(msp, (cx,cy), "T_MAX", color=C_HOT)
     msp.add_circle((cx,cy), 100, dxfattribs={"color": C_WARM, "lineweight": 20})
-    label(msp, (cx+10,cy+75), "120°C", color=C_WARM, align="LEFT")
+    label(msp, (cx+10,cy+75), "T_MED", color=C_WARM, align="LEFT")
     msp.add_circle((cx,cy), TRANS_OD/2, dxfattribs={"color": C_COPPER, "lineweight": 35})
-    label(msp, (cx+110,cy+110), "118°C", color=C_COPPER, align="LEFT")
+    label(msp, (cx+110,cy+110), "DEVANADOS", color=C_COPPER, align="LEFT")
     msp.add_circle((cx,cy), TRANS_ID/2, dxfattribs={"color": C_CORE, "lineweight": 25, "linetype": "DASHED"})
-    label(msp, (WALL_T+3,cy), "115°C", color=C_WARM, align="LEFT")
+    label(msp, (WALL_T+3,cy), "NÚCLEO", color=C_WARM, align="LEFT")
     label(msp, (POST_OD+8,cy), "30°C", color=C_COOL, align="LEFT")
 
     # Flechas flujo calor
@@ -219,13 +219,13 @@ def make_termico():
 
     # Leyenda
     ly = 20
-    for col,txt in [(C_HOT,"124°C — Núcleo (máx)"),(C_WARM,"118-120°C — Devanados"),
-                    (C_COPPER,"115°C — Gap/pared"),(C_STEEL,"Pared poste acero"),
+    for col,txt in [(C_HOT,"T_MAX — Núcleo (valor de la simulación FEM)"),(C_WARM,"T_MED — Devanados"),
+                    (C_COPPER,"Zona de contacto trans/pared"),(C_STEEL,"Pared poste acero"),
                     (C_COOL,"30°C — Ambiente exterior")]:
         msp.add_line((POST_OD+50,ly),(POST_OD+60,ly), dxfattribs={"color": col, "lineweight": 30})
         label(msp, (POST_OD+65,ly), txt, h=2.5, align="LEFT"); ly += 7
 
-    label(msp, (POST_OD/2,-12), "MAPA TÉRMICO — 20kVA (4×5kVA) — Flujo calor → pared → ambiente", h=3)
+    label(msp, (POST_OD/2,-12), "MAPA TÉRMICO — 28kVA (4×7kVA) — Flujo calor → pared → ambiente", h=3)
     doc.saveas(os.path.join(OUT, "plano_04_termico.dxf"))
     print("  OK plano_04_termico.dxf")
 

@@ -1,4 +1,4 @@
-ELMER SOLVER (v 9.0) STARTED AT: 2026/07/12 19:01:38
+ELMER SOLVER (v 9.0) STARTED AT: 2026/09/12 21:12:11
 ParCommInit: Initialize #PEs: 1
 MAIN: 
 MAIN: =============================================================
@@ -35,7 +35,7 @@ ListTagKeywords: Setting weight for keywords!
 ListTagKeywords: No parameters width suffix: normalize by volume
 ElmerAsciiMesh: Base mesh name: ./mesh
 MapCoordinates: Scaling coordinates: 1.000E+00 1.000E+00 1.000E+00
-LoadMesh: Elapsed REAL time:     0.0200 (s)
+LoadMesh: Elapsed REAL time:     0.0220 (s)
 MAIN: -------------------------------------
 OptimizeBandwidth: Initial bandwidth for heat equation: 92
 OptimizeBandwidth: Optimized bandwidth for heat equation: 218
@@ -56,78 +56,80 @@ HeatSolve:
 HeatSolve: Starting Assembly...
 HeatSolve: Assembly:
 HeatSolve: Assembly done
-       1 0.4344E+01
-       2 0.3398E+01
-       3 0.8162E+01
-       4 0.5557E+01
-       5 0.6027E+01
-       6 0.1028E+02
-       7 0.7758E+01
-       8 0.7284E+01
-       9 0.4527E+01
-      10 0.3109E+01
-      11 0.1747E+01
-      12 0.1701E+01
-      13 0.5973E+00
-      14 0.5328E+00
-      15 0.3629E+00
-      16 0.3391E+00
-      17 0.3940E+00
-      18 0.3048E+00
-      19 0.2639E+00
-      20 0.1213E+00
-      21 0.9606E-01
-      22 0.5918E-01
-      23 0.4223E-01
-      24 0.1969E-01
-      25 0.2367E-01
-      26 0.1450E-01
-      27 0.9810E-02
-      28 0.6064E-02
-      29 0.4358E-02
-      30 0.3403E-02
-      31 0.1711E-02
-      32 0.1250E-02
-      33 0.9946E-03
-      34 0.1023E-02
-      35 0.1010E-02
-      36 0.7766E-03
-      37 0.1044E-02
-      38 0.1043E-02
-      39 0.1197E-02
-      40 0.6968E-03
-      41 0.7380E-03
-      42 0.3683E-03
-      43 0.2244E-03
-      44 0.1206E-03
-      45 0.9151E-04
-      46 0.5276E-04
-      47 0.4400E-04
-      48 0.3024E-04
-      49 0.1924E-04
-      50 0.1049E-04
-      51 0.8602E-05
-      52 0.6624E-05
-      53 0.5932E-05
-      54 0.4333E-05
-      55 0.2951E-05
-      56 0.2391E-05
-      57 0.1434E-05
-      58 0.1079E-05
-      59 0.6643E-06
-      60 0.2928E-06
-      61 0.1532E-06
-      62 0.9854E-07
-      63 0.7162E-07
-      64 0.4463E-07
-      65 0.2569E-07
-      66 0.1310E-07
-      67 0.7670E-08
-      67 0.7670E-08
-ComputeChange: NS (ITER=1) (NRM,RELC): (  120.65240      2.0000000     ) :: heat equation
-HeatSolve: iter:    1 Assembly: (s)    0.05    0.05
+       1 0.3354E+01
+       2 0.2089E+01
+       3 0.7861E+01
+       4 0.5162E+01
+       5 0.4145E+01
+       6 0.9601E+01
+       7 0.7837E+01
+       8 0.7151E+01
+       9 0.5416E+01
+      10 0.2915E+01
+      11 0.1316E+01
+      12 0.1737E+01
+      13 0.7195E+00
+      14 0.6884E+00
+      15 0.3691E+00
+      16 0.2234E+00
+      17 0.2214E+00
+      18 0.2367E+00
+      19 0.2006E+00
+      20 0.2048E+00
+      21 0.7343E-01
+      22 0.8138E-01
+      23 0.2962E-01
+      24 0.2158E-01
+      25 0.1199E-01
+      26 0.8689E-02
+      27 0.5457E-02
+      28 0.4655E-02
+      29 0.4647E-02
+      30 0.5494E-02
+      31 0.4805E-02
+      32 0.5599E-02
+      33 0.4839E-02
+      34 0.5098E-02
+      35 0.3259E-02
+      36 0.2293E-02
+      37 0.1640E-02
+      38 0.1211E-02
+      39 0.6449E-03
+      40 0.3598E-03
+      41 0.3680E-03
+      42 0.2743E-03
+      43 0.1837E-03
+      44 0.1308E-03
+      45 0.1216E-03
+      46 0.6811E-04
+      47 0.4274E-04
+      48 0.2717E-04
+      49 0.2522E-04
+      50 0.1786E-04
+      51 0.1222E-04
+      52 0.8953E-05
+      53 0.5153E-05
+      54 0.4533E-05
+      55 0.3119E-05
+      56 0.1920E-05
+      57 0.8160E-06
+      58 0.4230E-06
+      59 0.2829E-06
+      60 0.2089E-06
+      61 0.1661E-06
+      62 0.1163E-06
+      63 0.7514E-07
+      64 0.4124E-07
+      65 0.2688E-07
+      66 0.2072E-07
+      67 0.1578E-07
+      68 0.1016E-07
+      69 0.6063E-08
+      69 0.6063E-08
+ComputeChange: NS (ITER=1) (NRM,RELC): (  117.18890      2.0000000     ) :: heat equation
+HeatSolve: iter:    1 Assembly: (s)    0.06    0.06
 HeatSolve: iter:    1 Solve:    (s)    0.02    0.02
-HeatSolve:  Result Norm   :    120.65240210320907
+HeatSolve:  Result Norm   :    117.18889991850924
 HeatSolve:  Relative Change :    2.0000000000000000
 HeatSolve: 
 HeatSolve: 
@@ -138,16 +140,16 @@ HeatSolve:
 HeatSolve: Starting Assembly...
 HeatSolve: Assembly:
 HeatSolve: Assembly done
-       1 0.5363E-08
-       1 0.5363E-08
-ComputeChange: NS (ITER=2) (NRM,RELC): (  120.65240     0.36995778E-12 ) :: heat equation
-HeatSolve: iter:    2 Assembly: (s)    0.05    0.10
+       1 0.2812E-08
+       1 0.2812E-08
+ComputeChange: NS (ITER=2) (NRM,RELC): (  117.18890     0.25720203E-12 ) :: heat equation
+HeatSolve: iter:    2 Assembly: (s)    0.05    0.11
 HeatSolve: iter:    2 Solve:    (s)    0.00    0.02
-HeatSolve:  Result Norm   :    120.65240210316443
-HeatSolve:  Relative Change :    3.6995777856353623E-013
-ComputeChange: SS (ITER=1) (NRM,RELC): (  120.65240      2.0000000     ) :: heat equation
+HeatSolve:  Result Norm   :    117.18889991847909
+HeatSolve:  Relative Change :    2.5720202913336428E-013
+ComputeChange: SS (ITER=1) (NRM,RELC): (  117.18890      2.0000000     ) :: heat equation
 WritePostFile: Saving results in ElmerPost format to file postedor.ep
 MAIN: *** Elmer Solver: ALL DONE ***
 MAIN: The end
-SOLVER TOTAL TIME(CPU,REAL):         0.45        0.45
-ELMER SOLVER FINISHED AT: 2026/07/12 19:01:39
+SOLVER TOTAL TIME(CPU,REAL):         0.46        0.46
+ELMER SOLVER FINISHED AT: 2026/09/12 21:12:12
