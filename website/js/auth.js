@@ -1,7 +1,7 @@
 (function () {
     var USER = 'admin';
     var PASS = 'admin12345';
-    var KEY = 'postedor_auth';
+    var KEY = 'movelty_auth';
     var path = window.location.pathname;
     var file = (path.split('/').pop() || '').toLowerCase();
     var inPages = /\/pages\/$/.test(path.substring(0, path.lastIndexOf('/') + 1));
@@ -25,9 +25,9 @@
     if (file !== 'login.html') {
         document.addEventListener('DOMContentLoaded', function () {
             var nav = document.querySelector('.navbar .navbar-inner');
-            if (nav && !document.getElementById('postedor-logout')) {
+            if (nav && !document.getElementById('movelty-logout')) {
                 var a = document.createElement('a');
-                a.id = 'postedor-logout';
+                a.id = 'movelty-logout';
                 a.href = '#';
                 a.textContent = 'Salir';
                 a.style.cssText = 'color:#fff;font-size:0.85rem;text-decoration:none;border:1px solid rgba(255,255,255,0.4);padding:6px 12px;border-radius:20px;margin-left:12px;transition:background .2s;';

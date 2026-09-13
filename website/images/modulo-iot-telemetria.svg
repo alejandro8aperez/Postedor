@@ -15,7 +15,7 @@
     .arrow { fill: #0b5394; }
   </style>
 
-  <text x="10" y="20" class="t title">RED PRIVADA TELEMÉTRICA DEL POSTEDOR — SENSORES, COMUNICACIÓN Y SEGURIDAD</text>
+  <text x="10" y="20" class="t title">RED PRIVADA TELEMÉTRICA DEL MOVELTY — SENSORES, COMUNICACIÓN Y SEGURIDAD</text>
   <text x="10" y="33" class="t sub">Sensores aislados galvánicamente · Adquisición por el gateway · cifrado TLS 1.3 · Telemedición y telecontrol hacia EPM · Anonimización según Ley 1581 de 2012</text>
 
   <!-- ===== SENSORES EN EL POSTE (izquierda) ===== -->

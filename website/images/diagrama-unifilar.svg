@@ -12,7 +12,7 @@
   </style>
 
   <!-- Título -->
-  <text x="10" y="12" class="text title">DIAGRAMA UNIFILAR Y LAYOUT - POSTEDOR (7–28 kVA)</text>
+  <text x="10" y="12" class="text title">DIAGRAMA UNIFILAR Y LAYOUT - MOVELTY (7–28 kVA)</text>
 
   <!-- DIAGRAMA UNIFILAR (izquierda) -->
   <g transform="translate(10,25)" id="unifilar">
@@ -70,7 +70,7 @@
 
   <!-- LAYOUT ELEVACIÓN (derecha) -->
   <g transform="translate(230,25)" id="layout">
-    <text x="0" y="0" class="text label">ELEVACIÓN - POSTEDOR (12 m)</text>
+    <text x="0" y="0" class="text label">ELEVACIÓN - MOVELTY (12 m)</text>
 
     <!-- Poste outline -->
     <rect x="0" y="10" width="80" height="240" class="box" />
@@ -115,5 +115,5 @@
   </g>
 
   <!-- Pie con referencia de archivo -->
-  <text x="10" y="289" class="text label">POSTEDOR - Documento gráfico generado automáticamente</text>
+  <text x="10" y="289" class="text label">MOVELTY - Documento gráfico generado automáticamente</text>
 </svg>
