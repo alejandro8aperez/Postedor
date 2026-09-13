@@ -13,7 +13,7 @@
   </style>
 
   <!-- Titulo -->
-  <text x="10" y="12" class="t title">ESTRUCTURA MODULAR DE 4 PARTES SOBREPUESTAS — UNIÓN TELESCÓPICA CON EMPERNADO</text>
+  <text x="10" y="12" class="t title">ESTRUCTURA MODULAR DE 4 PARTES SOBREPUESTAS — ENSAMBLE TELESCÓPICO POR EMBONE</text>
   <text x="10" y="23" class="t norm">Poste 12 m · hexagonal cónico · pata 500 mm → cima 260 mm · conicidad 2 cm/m. Normas: NTC 1329, RETIE 17.15, EPM ET-TD-ME04-01 (postes seccionados), ASCE/SEI-48, TIA/EIA-222 (internacional).</text>
 
   <!-- ===== VISTA ENSAMBLADA (izquierda) ===== -->
@@ -79,8 +79,8 @@
     <g transform="translate(250,155)">
       <circle cx="0" cy="0" r="3.5" fill="#fff" stroke="#333" stroke-width="0.5"/>
       <text x="0" y="2.6" class="t lbl" text-anchor="middle">B</text>
-      <text x="9" y="0" class="t norm">Perno GR 8.8 + tuerca (galv. ASTM A123/A153)</text>
-      <text x="9" y="8" class="t norm">Empalme telescópico: la parte H embona dentro de la parte inferior</text>
+      <text x="9" y="0" class="t norm">Sin tornillos: embone telescópico por conicidad</text>
+      <text x="9" y="8" class="t norm">Cada parte encaja y queda firme una sobre la otra</text>
     </g>
   </g>
 
