@@ -65,6 +65,17 @@ body {
     text-decoration: none;
 }
 
+.logo-img {
+    height: 44px;
+    width: auto;
+}
+
+.footer-brand .logo-img {
+    height: 46px;
+    width: auto;
+    margin-bottom: 16px;
+}
+
 .logo-icon {
     width: 42px;
     height: 42px;
