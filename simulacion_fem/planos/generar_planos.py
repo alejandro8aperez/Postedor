@@ -99,7 +99,7 @@ def make_plan():
     dim_diameter(msp, cx, cy, TRANS_OD)
     dim_diameter(msp, cx, cy, TRANS_ID, "143")
 
-    label(msp, (POST_OD/2, POST_OD+20), "POSTE 340×340×5mm — ACERO GALVANIZADO", h=3)
+    label(msp, (POST_OD/2, POST_OD+20), "SECCIÓN EN PARTE C — POSTE CÓNICO 500→260mm (C=2 cm/m EPM)  340×340×5mm ACERO GALV.", h=3)
     label(msp, (POST_OD/2, -35), "TRANSFORMADOR TOROIDAL 7kVA  OD=260  ID=143  H=130  (MONTAGE HORIZONTAL)")
     label(msp, (cx+120, cy+120), "BRAZO SPIDER AL 6063 ×4", color=C_AL, h=2.5, align="LEFT")
 
@@ -147,7 +147,7 @@ def make_lateral():
     label(msp, (pw+15, MARGIN+TRANS_H+GAP_Y/2), f"GAP {GAP_Y}")
     dim(msp, (0,0), (0,th), offset=(-20,0))
     dim(msp, (0,MARGIN), (0,MARGIN+TRANS_H), offset=(-20,0))
-    label(msp, (pw/2, th+15), f"CORTE VERTICAL — 4×7kVA = 28kVA  Altura total {th}mm", h=3.5)
+    label(msp, (pw/2, th+15), f"CORTE VERTICAL PARTE C — 4×7kVA = 28kVA  Altura total {th}mm  (Poste cónico: pila a 4.5–6.0m)", h=3.5)
 
     doc.saveas(os.path.join(OUT, "plano_02_lateral.dxf"))
     print("  OK plano_02_lateral.dxf")
