@@ -35,27 +35,106 @@
     <main>
         <section class="page-header parte-b">
             <h1>Parte B — Módulo IoT y Telemetría</h1>
-            <p>Monitoreo remoto con SIM Claro → EPM, sensores inteligentes y gestión descentralizada de pagos con Blockchain</p>
+            <p>Corazón digital del POSTEDOR: sensores, SIM Claro 4G/5G → EPM, seguridad TLS 1.3 y pagos descentralizados con Blockchain</p>
         </section>
 
         <section class="content-section">
             <div class="feature-row fade-in">
                 <div class="feature-content slide-in-left">
                     <h3>📡 Conectividad Inteligente</h3>
-                    <p>El módulo IoT empotrado en POSTEDOR permite el monitoreo remoto de todas las variables del sistema. Se comunica vía <strong>SIM Claro 4G/5G</strong> directamente con los servidores de <strong>EPM</strong>, garantizando la integración con la infraestructura del operador de red colombiano.</p>
+                    <p>El módulo IoT empotrado en el POSTEDOR es el <strong>cerebro del sistema</strong>: monitorea en tiempo real todas las variables del poste y las lleva de forma segura a los centros de control de <strong>EPM</strong>. Se comunica mediante una <strong>SIM Claro 4G/5G M2M</strong>, garantizando la integración con la infraestructura del operador de red colombiano.</p>
                     <ul class="feature-list">
-                        <li><strong>SIM:</strong> Claro 4G/5G M2M — Comunicación directa con EPM para telemedición y telecontrol</li>
-                        <li><strong>Sensores de tensión:</strong> Medición de V primaria (7620 V) y V secundaria (240/120 V) con CTs de precisión</li>
-                        <li><strong>Sensores de corriente:</strong> CTs en cada fase para monitoreo de carga y balance</li>
-                        <li><strong>Temperatura:</strong> Sensor PT100 en el núcleo del transformador toroidal</li>
-                        <li><strong>Humedad y presión:</strong> Sensor ambiental interno para detección de condensación</li>
-                        <li><strong>Energía:</strong> Medidor bidireccional para registrar consumo e inyección a red</li>
-                        <li><strong>Comunicación:</strong> Protocolos Modbus TCP/IP y MQTT con cifrado TLS 1.3</li>
-                        <li><strong>Protección de datos:</strong> Anonimización cumpliendo Ley 1581 de 2012</li>
+                        <li><strong>SIM:</strong> Claro 4G/5G M2M — comunicación directa con EPM para telemedición y telecontrol</li>
+                        <li><strong>Sensores de tensión:</strong> medición de V primaria (7620 V) y V secundaria (240/120 V) con transformadores de corriente (CTs) de precisión y aislamiento galvánico</li>
+                        <li><strong>Sensores de corriente:</strong> CTs en cada circuito para monitoreo de carga, balance de fases y detección de fallas</li>
+                        <li><strong>Temperatura:</strong> sensor PT100 ubicado en el núcleo del transformador toroidal</li>
+                        <li><strong>Humedad y presión:</strong> sensor ambiental interno para detección temprana de condensación</li>
+                        <li><strong>Energía:</strong> medidor bidireccional que registra el consumo y la inyección a la red</li>
+                        <li><strong>Comunicación:</strong> protocolos Modbus TCP/IP y MQTT con cifrado TLS 1.3</li>
+                        <li><strong>Protección de datos:</strong> anonimización y cumplimiento de la Ley 1581 de 2012</li>
                     </ul>
                 </div>
                 <div class="image-placeholder slide-in-right" style="background:none;border:none;padding:0;">
-                    <img src="../images/parte-b.png" alt="Módulo IoT" style="width:100%;height:auto;border-radius:var(--radius);" onerror="this.parentElement.innerHTML='<div style=\"display:flex;align-items:center;justify-content:center;height:300px;background:var(--ps-light);border-radius:var(--radius);color:var(--ps-primary);font-size:1rem;\">Parte B — Módulo IoT</div>'">
+                    <img src="../images/modulo-iot-esquema.svg" alt="Esquema del Módulo IoT" style="width:100%;height:auto;border-radius:var(--radius);" onerror="this.parentElement.innerHTML='<div style=\"display:flex;align-items:center;justify-content:center;height:300px;background:var(--ps-light);border-radius:var(--radius);color:var(--ps-primary);font-size:1rem;\">Esquema del Módulo IoT</div>'">
+                </div>
+            </div>
+
+            <div class="section-header fade-in" style="margin-top: 60px;">
+                <span class="section-tag">Hardware IoT</span>
+                <h2>Detalle del Módulo B</h2>
+            </div>
+
+            <div class="feature-row reverse fade-in" style="margin-top: 40px;">
+                <div class="feature-content slide-in-right">
+                    <h3>🔧 Componentes Internos</h3>
+                    <p>El módulo IoT se instala en la sección <strong>B del poste (2.5 – 4.5 m)</strong>. Alberga un <strong>gateway/controlador (PLC)</strong> con su SIM M2M, que condiciona la señal de los sensores y la transmite cifrada a la nube. La siguiente tabla detalla cada componente:</p>
+                    <div style="overflow-x:auto;">
+                        <table style="width:100%;border-collapse:collapse;font-size:0.9rem;margin-top:12px;">
+                            <thead>
+                                <tr style="background:var(--ps-primary);color:white;">
+                                    <th style="padding:8px 12px;text-align:left;">Componente</th>
+                                    <th style="padding:8px 12px;text-align:left;">Especificación</th>
+                                    <th style="padding:8px 12px;text-align:left;">Función</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom:1px solid rgba(11,83,148,0.15);">
+                                    <td style="padding:8px 12px;font-weight:600;">Gateway / PLC</td>
+                                    <td style="padding:8px 12px;">Procesador embebido + radio LTE-M/NB-IoT</td>
+                                    <td style="padding:8px 12px;">Adquisición de datos, cifrado y transmisión</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(11,83,148,0.15);">
+                                    <td style="padding:8px 12px;font-weight:600;">SIM Claro M2M</td>
+                                    <td style="padding:8px 12px;">4G / 5G · operador EPM</td>
+                                    <td style="padding:8px 12px;">Enlace a los servidores de EPM</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(11,83,148,0.15);">
+                                    <td style="padding:8px 12px;font-weight:600;">CTs de tensión</td>
+                                    <td style="padding:8px 12px;">7620 V primaria · 240/120 V secundaria</td>
+                                    <td style="padding:8px 12px;">Medición de tensión con aislamiento</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(11,83,148,0.15);">
+                                    <td style="padding:8px 12px;font-weight:600;">CTs de corriente</td>
+                                    <td style="padding:8px 12px;">Clase de precisión 0.5</td>
+                                    <td style="padding:8px 12px;">Monitoreo de carga y balance</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(11,83,148,0.15);">
+                                    <td style="padding:8px 12px;font-weight:600;">PT100</td>
+                                    <td style="padding:8px 12px;">RTD Pt100, 3 hilos</td>
+                                    <td style="padding:8px 12px;">Temperatura del núcleo toroidal</td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(11,83,148,0.15);">
+                                    <td style="padding:8px 12px;font-weight:600;">Sensor ambiental</td>
+                                    <td style="padding:8px 12px;">Humedad + presión + T°</td>
+                                    <td style="padding:8px 12px;">Detección de condensación</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:8px 12px;font-weight:600;">Medidor bidireccional</td>
+                                    <td style="padding:8px 12px;">kWh importados / exportados</td>
+                                    <td style="padding:8px 12px;">Consumo e inyección a red</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="image-placeholder slide-in-left" style="background:none;border:none;padding:0;">
+                    <img src="../images/parte-b.png" alt="Módulo IoT del POSTEDOR" style="width:100%;height:auto;border-radius:var(--radius);" onerror="this.parentElement.innerHTML='<div style=\"display:flex;align-items:center;justify-content:center;height:300px;background:var(--ps-light);border-radius:var(--radius);color:var(--ps-primary);font-size:1rem;\">Módulo IoT</div>'">
+                </div>
+            </div>
+
+            <div class="feature-row fade-in" style="margin-top: 40px;">
+                <div class="feature-content slide-in-left">
+                    <h3>📊 Telemetría y Seguridad</h3>
+                    <p>La cadena de medición va desde los <strong>sensores aislados galvánicamente</strong> hasta el <strong>gateway</strong>, donde se cifra con TLS 1.3 y se publica por Modbus TCP/IP o MQTT. Los datos llegan a los centros de control de EPM para telemedición, telecontrol y alertas tempranas, y las transacciones de pago quedan registradas de forma inmutable en la blockchain.</p>
+                    <ul class="feature-list">
+                        <li><strong>Telemedición:</strong> reporte continuo de V, I, T°, humedad, presión y energía</li>
+                        <li><strong>Telecontrol:</strong> órdenes remotas de EPM sobre el cargador y las protecciones</li>
+                        <li><strong>Alertas tempranas:</strong> umbrales de temperatura y carga configurados por el operador</li>
+                        <li><strong>Seguridad:</strong> cifrado TLS 1.3 en todo el canal y anonimización de datos personales (Ley 1581 de 2012)</li>
+                    </ul>
+                </div>
+                <div class="image-placeholder slide-in-right" style="background:none;border:none;padding:0;">
+                    <img src="../images/modulo-iot-telemetria.svg" alt="Red privada telemétrica" style="width:100%;height:auto;border-radius:var(--radius);" onerror="this.parentElement.innerHTML='<div style=\"display:flex;align-items:center;justify-content:center;height:300px;background:var(--ps-light);border-radius:var(--radius);color:var(--ps-primary);font-size:1rem;\">Telemetría</div>'">
                 </div>
             </div>
 
