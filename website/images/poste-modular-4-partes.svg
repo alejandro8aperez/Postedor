@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="860mm" height="300mm" viewBox="0 0 860 300" version="1.1">
+  <style>
+    .t { font-family: Arial, Helvetica, sans-serif; }
+    .title { font-size: 10px; font-weight: bold; fill: #0b5394; }
+    .lbl { font-size: 7.5px; fill: #333; }
+    .lblw { font-size: 6.5px; fill: #fff; }
+    .dim { stroke: #3c78d8; stroke-width: 0.4; stroke-dasharray: 2 1; fill: none; }
+    .dimt { font-size: 6px; fill: #1155cc; }
+    .norm { font-size: 6px; fill: #666; }
+    .hdr { font-size: 8px; font-weight: bold; }
+    .good { font-size: 7.5px; fill: #1b5e20; }
+  </style>
+
+  <!-- Titulo -->
+  <text x="10" y="12" class="t title">ESTRUCTURA MODULAR DE 4 PARTES SOBREPUESTAS — UNIÓN TELESCÓPICA CON EMPERNADO</text>
+  <text x="10" y="23" class="t norm">Poste 12 m · hexagonal cónico · pata 500 mm → cima 260 mm · conicidad 2 cm/m. Normas: NTC 1329, RETIE 17.15, EPM ET-TD-ME04-01 (postes seccionados), ASCE/SEI-48, TIA/EIA-222 (internacional).</text>
+
+  <!-- ===== VISTA ENSAMBLADA (izquierda) ===== -->
+  <text x="20" y="40" class="t hdr">A) POSTE ENSAMBLADO (12 m)</text>
+
+  <!-- Poste cónico: ancho en mm = 500 - 20*h (m); escala 0.9 px/mm -->
+  <!-- base (h=0) W=500 -> 450px ; cima (h=12) W=260 -> 234px ; alto 12m -> 200px ; 16.67px/m -->
+  <!-- D: 6.0-12m (100px) ; C: 4.5-6.0m (25px) ; B: 2.5-4.5m (33px) ; A: 0-2.5m (42px) -->
+  <g transform="translate(20,55)">
+    <!-- Cima (zona D, parte superior) -->
+    <path d="M131,-100 L319,-100 L327,0 L326,25 L124,25 L123,0 Z" fill="#ffd54f" stroke="#b28900" stroke-width="1"/>
+    <text x="225" y="-85" class="t lblw" text-anchor="middle">D — MT / Paneles</text>
+    <text x="225" y="-76" class="t lblw" text-anchor="middle">(6.0 – 12.0 m)</text>
+
+    <!-- Parte C -->
+    <polygon points="124,25 326,25 328,50 122,50" fill="#ef9a9a" stroke="#b71c1c" stroke-width="1"/>
+    <text x="225" y="42" class="t lblw" text-anchor="middle">C — Transformador</text>
+
+    <!-- Parte B -->
+    <polygon points="122,50 328,50 332,83 118,83" fill="#ce93d8" stroke="#6a1b9a" stroke-width="1"/>
+    <text x="225" y="71" class="t lblw" text-anchor="middle">B — IoT</text>
+
+    <!-- Parte A (base, lo más ancha) -->
+    <polygon points="118,83 332,83 338,140 112,140" fill="#ffcc80" stroke="#e65100" stroke-width="1"/>
+    <text x="225" y="118" class="t lblw" text-anchor="middle">A — Cargador EV</text>
+    <text x="225" y="128" class="t lblw" text-anchor="middle">y BT</text>
+
+    <!-- Uniones telescópicas (líneas de junta) -->
+    <line x1="106" y1="25" x2="344" y2="25" class="dim"/>
+    <line x1="106" y1="50" x2="344" y2="50" class="dim"/>
+    <line x1="106" y1="83" x2="344" y2="83" class="dim"/>
+
+    <!-- Base / piso -->
+    <line x1="-10" y1="140" x2="350" y2="140" stroke="#000" stroke-width="1.5"/>
+    <text x="112" y="152" class="t norm">Nivel de piso</text>
+    <line x1="112" y1="140" x2="112" y2="150" class="dim"/>
+    <line x1="338" y1="140" x2="338" y2="150" class="dim"/>
+
+    <!-- Cotas de altura por parte -->
+    <line x1="30" y1="-100" x2="30" y2="140" class="dim"/>
+    <line x1="-40" y1="-85" x2="30" y2="-85" class="dim"/>
+    <text x="-33" y="-81" class="t norm">D: 6.0 m</text>
+    <line x1="-40" y1="37" x2="30" y2="37" class="dim"/>
+    <text x="-33" y="41" class="t norm">C: 1.5 m</text>
+    <line x1="-40" y1="66" x2="30" y2="66" class="dim"/>
+    <text x="-33" y="70" class="t norm">B: 2.0 m</text>
+    <line x1="-40" y1="111" x2="30" y2="111" class="dim"/>
+    <text x="-33" y="115" class="t norm">A: 2.5 m</text>
+
+    <!-- Cotas de ancho (conicidad) -->
+    <line x1="340" y1="140" x2="372" y2="140" class="dim"/>
+    <text x="376" y="143" class="t dimt">500 mm (pata)</text>
+    <line x1="340" y1="83" x2="376" y2="83" class="dim"/>
+    <text x="380" y="86" class="t dimt">446 mm</text>
+    <line x1="340" y1="50" x2="376" y2="50" class="dim"/>
+    <text x="380" y="53" class="t dimt">440 mm</text>
+    <line x1="340" y1="25" x2="376" y2="25" class="dim"/>
+    <text x="380" y="28" class="t dimt">430 mm</text>
+    <line x1="340" y1="-100" x2="376" y2="-100" class="dim"/>
+    <text x="376" y="-96" class="t dimt">260 mm (cima)</text>
+
+    <!-- Detalle de unión telescópica -->
+    <g transform="translate(250,155)">
+      <circle cx="0" cy="0" r="3.5" fill="#fff" stroke="#333" stroke-width="0.5"/>
+      <text x="0" y="2.6" class="t lbl" text-anchor="middle">B</text>
+      <text x="9" y="0" class="t norm">Perno GR 8.8 + tuerca (galv. ASTM A123/A153)</text>
+      <text x="9" y="8" class="t norm">Empalme telescópico: la parte H embona dentro de la parte inferior</text>
+    </g>
+  </g>
+
+  <!-- ===== VISTA EXPLOTADA (derecha) ===== -->
+  <text x="470" y="40" class="t hdr">B) DESPIECE — LAS 4 PARTES SE SOBREPONEN EN OBRA</text>
+
+  <g transform="translate(500,55)">
+    <!-- Part D (arriba) -->
+    <path d="M76,-100 L184,-100 L187,0 L188,8 L72,8 L73,0 Z" fill="#ffd54f" stroke="#b28900" stroke-width="1"/>
+    <text x="130" y="-55" class="t lblw" text-anchor="middle">D</text>
+    <text x="130" y="-46" class="t lblw" text-anchor="middle">MT / Paneles</text>
+
+    <!-- Part C -->
+    <polygon points="72,12 188,12 189,34 71,34" fill="#ef9a9a" stroke="#b71c1c" stroke-width="1"/>
+    <text x="130" y="26" class="t lblw" text-anchor="middle">C — Transformador 1–4×</text>
+
+    <!-- Part B -->
+    <polygon points="70,40 190,40 192,64 68,64" fill="#ce93d8" stroke="#6a1b9a" stroke-width="1"/>
+    <text x="130" y="55" class="t lblw" text-anchor="middle">B — IoT</text>
+
+    <!-- Part A (base) -->
+    <polygon points="67,72 193,72 197,115 63,115" fill="#ffcc80" stroke="#e65100" stroke-width="1"/>
+    <text x="130" y="98" class="t lblw" text-anchor="middle">A — Cargador EV</text>
+    <text x="130" y="107" class="t lblw" text-anchor="middle">y BT</text>
+
+    <!-- Flechas de montaje (se sobrepone: la parte de arriba desciende en la de abajo) -->
+    <g stroke="#1b5e20" stroke-width="1.2" fill="#1b5e20">
+      <line x1="30" y1="-8" x2="30" y2="16" />
+      <polygon points="26,14 34,14 30,22"/>
+      <line x1="30" y1="38" x2="30" y2="64" />
+      <polygon points="26,62 34,62 30,70"/>
+      <line x1="30" y1="72" x2="30" y2="98" />
+      <polygon points="26,96 34,96 30,104"/>
+    </g>
+    <text x="14" y="-18" class="t good">Montaje en obra</text>
+    <text x="14" y="-8" class="t good">(telescópico)</text>
+
+    <!-- Acceso interior / motivo -->
+    <g transform="translate(210,20)">
+      <rect x="0" y="-8" width="210" height="18" fill="#e8f0e8" stroke="#1b5e20" stroke-width="0.7" rx="3"/>
+      <text x="105" y="5" class="t good" text-anchor="middle">✓ Por ser partes, se cambian/enbovan por separado</text>
+    </g>
+    <g transform="translate(210,42)">
+      <rect x="0" y="-8" width="210" height="18" fill="#e8f0e8" stroke="#1b5e20" stroke-width="0.7" rx="3"/>
+      <text x="105" y="5" class="t good" text-anchor="middle">✓ Interior accesible: se equipa cada parte en piso</text>
+    </g>
+    <g transform="translate(210,64)">
+      <rect x="0" y="-8" width="210" height="18" fill="#e8f0e8" stroke="#1b5e20" stroke-width="0.7" rx="3"/>
+      <text x="105" y="5" class="t good" text-anchor="middle">✓ Instalación fácil: menos peso por izaje</text>
+    </g>
+  </g>
+
+  <!-- Leyenda de colores -->
+  <g transform="translate(20,260)">
+    <rect x="0" y="-6" width="9" height="9" fill="#ffcc80" stroke="#e65100" stroke-width="0.5"/>
+    <text x="12" y="1" class="t norm">Parte A — Cargador EV (0 – 2.5 m)</text>
+    <rect x="150" y="-6" width="9" height="9" fill="#ce93d8" stroke="#6a1b9a" stroke-width="0.5"/>
+    <text x="162" y="1" class="t norm">Parte B — IoT (2.5 – 4.5 m)</text>
+    <rect x="280" y="-6" width="9" height="9" fill="#ef9a9a" stroke="#b71c1c" stroke-width="0.5"/>
+    <text x="292" y="1" class="t norm">Parte C — Transformador (4.5 – 6.0 m)</text>
+    <rect x="470" y="-6" width="9" height="9" fill="#ffd54f" stroke="#b28900" stroke-width="0.5"/>
+    <text x="482" y="1" class="t norm">Parte D — MT y paneles (6.0 – 12.0 m)</text>
+  </g>
+</svg>

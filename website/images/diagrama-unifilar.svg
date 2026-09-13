@@ -12,7 +12,7 @@
   </style>
 
   <!-- Título -->
-  <text x="10" y="12" class="text title">DIAGRAMA UNIFILAR Y LAYOUT - POSTEDOR (15 kVA)</text>
+  <text x="10" y="12" class="text title">DIAGRAMA UNIFILAR Y LAYOUT - POSTEDOR (7–28 kVA)</text>
 
   <!-- DIAGRAMA UNIFILAR (izquierda) -->
   <g transform="translate(10,25)" id="unifilar">
@@ -25,8 +25,8 @@
 
     <!-- Transformador -->
     <rect x="80" y="-18" width="70" height="36" class="box"/>
-    <text x="115" y="-3" class="text label" text-anchor="middle">Transformador 15 kVA</text>
-    <text x="115" y="6" class="text label" text-anchor="middle">13.2 kV → 240/120 V (en aceite)</text>
+    <text x="115" y="-3" class="text label" text-anchor="middle">Transformador 7–28 kVA</text>
+    <text x="115" y="6" class="text label" text-anchor="middle">Toroidal seco (núcleo M4)</text>
 
     <!-- Salida BT -->
     <line x1="150" y1="0" x2="220" y2="0" class="elec" />
@@ -75,25 +75,30 @@
     <!-- Poste outline -->
     <rect x="0" y="10" width="80" height="240" class="box" />
 
-    <!-- Divisiones tramos: 6m / 3m / 3m scaled to 240 height -->
+    <!-- Divisiones: 4 partes sobrepuestas escaladas a 240 height -->
     <!-- escala: 240 units -> 12 m => 20 units/meter -->
-    <!-- tramo1 6m -> 120 units -->
+    <!-- Parte D: 6.0-12m -> 120 units -->
     <line x1="0" y1="130" x2="80" y2="130" class="dim" />
-    <text x="40" y="126" class="text label" text-anchor="middle">Fin Tramo 1 (6 m)</text>
+    <text x="40" y="126" class="text label" text-anchor="middle">Junta C–D (6.0 m)</text>
 
-    <!-- tramo2 3m -> 60 units -->
-    <line x1="0" y1="70" x2="80" y2="70" class="dim" />
-    <text x="40" y="66" class="text label" text-anchor="middle">Fin Tramo 2 (3 m) - Transformador</text>
+    <!-- Parte C: 4.5-6.0m -> 30 units -->
+    <line x1="0" y1="160" x2="80" y2="160" class="dim" />
+    <text x="40" y="156" class="text label" text-anchor="middle">Junta B–C (4.5 m) - Transformador</text>
 
-    <!-- etiquetas de tramos -->
-    <text x="90" y="40" class="text label">Tramo 3: MT y paneles</text>
-    <text x="90" y="100" class="text label">Tramo 2: Transformador / Comp.2</text>
-    <text x="90" y="170" class="text label">Tramo 1: Base / Comp.1</text>
+    <!-- Parte B: 2.5-4.5m -> 40 units -->
+    <line x1="0" y1="200" x2="80" y2="200" class="dim" />
+    <text x="40" y="196" class="text label" text-anchor="middle">Junta A–B (2.5 m)</text>
+
+    <!-- etiquetas de partes -->
+    <text x="90" y="40" class="text label">Parte D: MT, seccionador y paneles (6–12 m)</text>
+    <text x="90" y="100" class="text label">Parte C: Transformador toroidal (4.5–6 m)</text>
+    <text x="90" y="130" class="text label">Parte B: IoT / servicios (2.5–4.5 m)</text>
+    <text x="90" y="175" class="text label">Parte A: Cargador EV / base (0–2.5 m)</text>
 
     <!-- Planta del Comp.2 (detalle) -->
     <g transform="translate(-10,270)">
       <rect x="0" y="0" width="120" height="80" class="box" />
-      <text x="60" y="-4" class="text label" text-anchor="middle">PLANTA - Comp.2 (Transformador)</text>
+      <text x="60" y="-4" class="text label" text-anchor="middle">PLANTA - Parte C (Transformador)</text>
 
       <!-- Transformador en planta -->
       <circle cx="35" cy="40" r="12" stroke="#0b5394" stroke-width="0.7" fill="none" />
