@@ -157,6 +157,73 @@
                 </table>
             </div>
             <p style="text-align:center;margin-top:12px;color:var(--text-light);font-size:0.85rem;">Los 8 casos cumplen con el límite Clase F (155°C). Diferencia spider vs sin-spider: ~2.5-3°C (la resistencia dominante es la convección natural en la pared exterior).</p>
+
+            <h4 style="text-align:center;margin:2rem 0 1rem;">Clases de Aislamiento Térmico (IEC 60085) — Verificación de la Araña</h4>
+            <div style="overflow-x:auto;">
+                <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
+                    <thead>
+                        <tr style="background:#37474F;color:white;">
+                            <th style="padding:10px 14px;text-align:left;">Clase</th>
+                            <th style="padding:10px 14px;text-align:center;">T máx. devanado (°C)</th>
+                            <th style="padding:10px 14px;text-align:center;">Aumento admisible (K s/ 40°C)</th>
+                            <th style="padding:10px 14px;text-align:center;">Material típico</th>
+                            <th style="padding:10px 14px;text-align:center;">¿Cumple con araña?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom:1px solid var(--border);">
+                            <td style="padding:9px 14px;font-weight:600;">Clase 90 (Y)</td>
+                            <td style="padding:9px 14px;text-align:center;">90°C</td>
+                            <td style="padding:9px 14px;text-align:center;">50 K</td>
+                            <td style="padding:9px 14px;text-align:center;">Algodón, seda, papel no tratado</td>
+                            <td style="padding:9px 14px;text-align:center;color:#e53935;font-weight:600;">✗</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--border);background:var(--ps-light);">
+                            <td style="padding:9px 14px;font-weight:600;">Clase A</td>
+                            <td style="padding:9px 14px;text-align:center;">105°C</td>
+                            <td style="padding:9px 14px;text-align:center;">65 K</td>
+                            <td style="padding:9px 14px;text-align:center;">Algodón, seda, papel impregnado</td>
+                            <td style="padding:9px 14px;text-align:center;color:#e53935;font-weight:600;">✗</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--border);">
+                            <td style="padding:9px 14px;font-weight:600;">Clase E</td>
+                            <td style="padding:9px 14px;text-align:center;">120°C</td>
+                            <td style="padding:9px 14px;text-align:center;">75 K</td>
+                            <td style="padding:9px 14px;text-align:center;">Resinas epoxi, poliéster</td>
+                            <td style="padding:9px 14px;text-align:center;color:#43a047;font-weight:600;">✓ 118.1°C</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--border);background:var(--ps-light);">
+                            <td style="padding:9px 14px;font-weight:600;">Clase B</td>
+                            <td style="padding:9px 14px;text-align:center;">130°C</td>
+                            <td style="padding:9px 14px;text-align:center;">80 K</td>
+                            <td style="padding:9px 14px;text-align:center;">Vidrio, fibra, mica; adhesivos resistentes</td>
+                            <td style="padding:9px 14px;text-align:center;color:#43a047;font-weight:600;">✓</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--border);">
+                            <td style="padding:9px 14px;font-weight:600;">Clase F</td>
+                            <td style="padding:9px 14px;text-align:center;">155°C</td>
+                            <td style="padding:9px 14px;text-align:center;">100 K</td>
+                            <td style="padding:9px 14px;text-align:center;">Vidrio, mica, resinas epoxi (devanados)</td>
+                            <td style="padding:9px 14px;text-align:center;color:#43a047;font-weight:600;">✓</td>
+                        </tr>
+                        <tr style="border-bottom:2px solid var(--ps-primary);background:#e8f5e9;">
+                            <td style="padding:9px 14px;font-weight:600;">Clase H</td>
+                            <td style="padding:9px 14px;text-align:center;">180°C</td>
+                            <td style="padding:9px 14px;text-align:center;">125 K</td>
+                            <td style="padding:9px 14px;text-align:center;">Silicón, vidrio, amianto</td>
+                            <td style="padding:9px 14px;text-align:center;color:#43a047;font-weight:600;">✓</td>
+                        </tr>
+                        <tr style="border-bottom:1px solid var(--border);">
+                            <td style="padding:9px 14px;font-weight:600;">Clase C</td>
+                            <td style="padding:9px 14px;text-align:center;">>180°C</td>
+                            <td style="padding:9px 14px;text-align:center;">>125 K</td>
+                            <td style="padding:9px 14px;text-align:center;">Mica, vidrio cuarzo, porcelana</td>
+                            <td style="padding:9px 14px;text-align:center;color:#43a047;font-weight:600;">✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="text-align:center;margin-top:12px;color:var(--text-light);font-size:0.85rem;">Peor caso <strong>con araña</strong>: 118.1°C (28 kVA). La araña de aluminio 6063-T5 deja el devanado en <strong>Clase E</strong> (limite 120°C, margen 1.9°C) y con holgura en <strong>Clase B</strong> (margen 11.9°C). El diseño nominal es <strong>Clase F</strong> (155°C) con margen ≥36.9°C.</p>
         </section>
 
         <section class="content-section">
